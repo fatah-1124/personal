@@ -1,0 +1,264 @@
+---
+import '../assets/css/bootstrap.css';
+import '../assets/css/app.css';
+---
+<br>
+<div class="page-layout">
+	<div class="sidebar">
+			<div class="p-4 mb-2 bg-dark border 50 border-light">
+				<a href="profil"><button type="button" class="btn btn-light">PROFIL</button></a><br><br>
+				<a href="pendidikan"><button type="button" class="btn btn-light">PENDIDIKAN</button></a><br><br> 
+				<a href="pekerjaan"><button type="button" class="btn btn-light">PEKERJAAN</button></a><br><br> 
+				<a href="portfolio"><button type="button" class="btn btn-light">PORTFOLIO</button></a><br><br> 
+				<a href="sertifikat"><button type="button" class="btn btn-light">SERTIFIKAT</button></a><br><br> 
+				<a href="http://clicky.id/anchordata"><button type="button" class="btn btn-light">LAYANAN</button></a><br><br> 
+				<a href="http://linkedin/in/tukang-data"><button type="button" class="btn btn-light">MEDIA SOSIAL</button></a><br><br> 
+				<a href="kontak"><button type="button" class="btn btn-light">KONTAK</button></a> 
+				
+			</div>
+	</div>
+
+	<div class="main-content">
+		<div id="container">
+			<main>
+				<div class="container">	
+					<div class="p-3 mb-2 bg-light border 10 border-primary">
+						<div class="col-md-6">
+                                    <h3>
+                                        KONTAK
+                                    </h3>
+
+                                    <ul class="list-group">
+
+                                        <li class="list-group-item">
+                                            Instagram : <a href="http://www.instagram.com/fatah_mda">@fatah_mda</a>
+                                        </li>
+
+                                        <li class="list-group-item">
+                                            Linkedin : <a href="http://www.linkedin.com/in/tukang-data">tukang-data</a>
+                                        </li>
+
+                                        <li class="list-group-item">
+                                            Whatsapp : <a href="http://wa.me/6285648013129">0856-4801-3129</a>
+                                        </li>
+
+                                        <li class="list-group-item">
+                                            Email : <a href="mailto:fatah@deepwater.my.id">fatah@deepwater.my.id</a>
+                                        </li>
+
+                                        
+                                    </ul>
+                                </div>
+
+
+						<br>
+						<section id="links">
+							<a class="button" href="beranda">Kembali ke Beranda</a>
+						</section>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+</div>
+<footer class="bg-dark text-white text-center p-4 mt-5">
+    <p class="mb-0">
+        Copyright &copy; 2026 - R. M. Fatah Yasin
+    </p>
+</footer>
+
+<style>
+	.page-layout {
+		display: flex;
+		width: 100%;
+	}
+
+	.sidebar {
+		flex: 0 0 auto;
+	}
+
+	.main-content {
+		flex: 1 1 auto;
+		min-width: 0; /* penting: biar grid di dalamnya bisa menyusut/melebar dengan benar */
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.0rem;
+		width: 100%;
+	}
+
+	.grid img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(100px);
+	}
+
+	#container {
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		height: 100%;
+	}
+
+	main {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	#hero {
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+		justify-content: center;
+		padding: 16px;
+	}
+
+	h1 {
+		font-size: 22px;
+		margin-top: 0.25em;
+	}
+
+	#links {
+		display: flex;
+		gap: 16px;
+	}
+
+	#links a {
+		display: flex;
+		align-items: center;
+		padding: 10px 12px;
+		color: #111827;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+	#links a:hover {
+		color: rgb(78, 80, 86);
+	}
+
+	#links a svg {
+		height: 1em;
+		margin-left: 8px;
+	}
+
+	#links a.button {
+		color: white;
+		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+		box-shadow:
+			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
+		border-radius: 10px;
+	}
+
+	#links a.button:hover {
+		color: rgb(230, 230, 230);
+		box-shadow: none;
+	}
+
+	pre {
+		font-family:
+			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
+			monospace;
+		font-weight: normal;
+		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin: 0;
+	}
+
+	h2 {
+		margin: 0 0 1em;
+		font-weight: normal;
+		color: #111827;
+		font-size: 20px;
+	}
+
+	p {
+		color: #4b5563;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.006em;
+		margin: 0;
+	}
+
+	code {
+		display: inline-block;
+		background:
+			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
+			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
+		border-radius: 8px;
+		border: 1px solid transparent;
+		padding: 6px 8px;
+	}
+
+	.box {
+		padding: 16px;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 16px;
+		border: 1px solid white;
+	}
+
+	#news {
+		position: absolute;
+		bottom: 16px;
+		right: 16px;
+		max-width: 300px;
+		text-decoration: none;
+		transition: background 0.2s;
+		backdrop-filter: blur(50px);
+	}
+
+	#news:hover {
+		background: rgba(255, 255, 255, 0.55);
+	}
+
+	@media screen and (max-height: 368px) {
+		#news {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		#container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#hero {
+			display: block;
+			padding-top: 10%;
+		}
+
+		#links {
+			flex-wrap: wrap;
+		}
+
+		#links a.button {
+			padding: 14px 18px;
+		}
+
+		#news {
+			right: 16px;
+			left: 16px;
+			bottom: 2.5rem;
+			max-width: 100%;
+		}
+
+		h1 {
+			line-height: 1.5;
+		}
+	}
+</style>
+
+
