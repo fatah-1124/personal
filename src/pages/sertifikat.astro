@@ -9,24 +9,6 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
 	<Layout />
 </Layout>
-<div id="container">
-	<main>
-		<section id="Hero">
-		<section id="links">
-			<a class="button" href="profil">Profil</a>
-			<a class="button" href="pendidikan">Pendidikan</a>
-			<a class="button" href="pekerjaan">Pekerjaan</a>
-			<a class="button" href="portfolio">Portfolio</a>
-			<a class="button" href="sertifikat">Sertifikat</a>
-			<a class="button" href="http://clicky.id/anchordata">Produk & Layanan</a>
-			<a class="button" href="http://www.linkedin.com/in/tukang-data">Media Sosial</a>
-			<a class="button" href="kontak">Kontak</a>
-		</section>
-		</section>
-	</main>
-	
-</div>
-<br>
 
 <div class="page-layout">
 	<div class="main-content">
@@ -34,6 +16,23 @@ import Layout from '../layouts/Layout.astro';
 			<main>
 				<div class="container">	
 					<div class="p-4 mb-2 bg-light border 10 border-primary rounded">
+						<div class="dropdown">
+  							<button class="btn btn-primary dropdown-toggle" type="button" 
+          							data-bs-toggle="dropdown" aria-expanded="false">
+    								Menu
+  							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/profil">Profil</a></li>
+								<li><a class="dropdown-item" href="/pendidikan">Pendidikan</a></li>
+								<li><a class="dropdown-item" href="/pekerjaan">Pekerjaan</a></li>
+								<li><a class="dropdown-item" href="/portfolio">Portfolio</a></li>
+								<li><a class="dropdown-item" href="/sertifikat">Sertifikat</a></li>
+								<li><a class="dropdown-item" href="http://clicky.id/anchordata">Produk & Layanan</a></li>
+								<li><a class="dropdown-item" href="http://www.linkedin.com/in/tukang-data">Media Sosial</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="/kontak">Kontak</a></li>
+							</ul>
+						</div> <br>
 						
 						<h3>SERTIFIKAT KETERAMPILAN</h3>
 						
