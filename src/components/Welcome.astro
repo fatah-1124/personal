@@ -1,60 +1,75 @@
 ---
-// import astroLogo from '../assets/astro.svg';
+import '../assets/css/bootstrap.css';
 import background from '../assets/background.svg';
+import Layout from '../layouts/Layout.astro';
 ---
-
+<Layout>
+	<Layout />
+</Layout>
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
 			
 		<section id="hero">
-			<!-- <a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			> -->
-				<br><br><br><br><br>
-			<h1>
-				R. Mohammad Fatah Yasin 
-			</h1>
+			<br>
+			<div class="container">
+				<div>
+					<table>
+						<td>
+							<img src="/logo.jpg" alt="">
+						</td>
+						<td class="ps-4">
+							<h3>
+							R. Mohammad Fatah Yasin 
+						</h3>
+					
+						<h2>Maritime Data Consultant || Web Application & BI Developer</h2>
+						</td>
+						
+					</table>
+					
+				</div>
+			</div> <br>
 			
-			<h2>Maritime Data Consultant | Web & Dashboard Developer</h2>
-			<br> <br>	
-			<h1>
-				Selamat datang ..................
-			</h1>
-			<p>
-				Situs ini berisi semua informasi tentang diri saya, mulai dari riwayat pendidikan, pekerjaan, dan sebagainya. <br>
-				Silahkan klik menu di bawah ini untuk informasi lebih lengkap. <br>
-				Terima kasih atas kunjungan Anda......
-			</p>
-			<br>
-			<br>
-			<section id="links">
-				
-				<a class="button" href="profil">Profil</a>
-				<a class="button" href="pendidikan">Pendidikan</a>
-				<a class="button" href="pekerjaan">Pekerjaan</a>
-				<a class="button" href="portfolio">Portfolio</a>
-				<a class="button" href="http://clicky.id/anchordata">Produk & Layanan</a>
-				<a class="button" href="http://www.linkedin.com/in/tukang-data">Media Sosial</a>
-				<a class="button" href="kontak">Kontak</a>
+			<div class="container">
+				<div class="p-4 mb-2 bg-light border 10 border-primary rounded">	
+					<h1>
+						Selamat datang ..................
+					</h1>
+					<p>
+						Situs ini berisi semua informasi tentang diri saya, mulai dari riwayat pendidikan, pekerjaan, dan sebagainya. <br>
+						Silahkan klik menu di bawah ini untuk informasi lebih lengkap. <br>
+						Terima kasih atas kunjungan Anda......
+					</p>
+					<br>
+					<br>
+					<section id="links">
+						
+						<a class="button" href="profil">Profil</a>
+						<a class="button" href="pendidikan">Pendidikan</a>
+						<a class="button" href="pekerjaan">Pekerjaan</a>
+						<a class="button" href="portfolio">Portfolio</a>
+						<a class="button" href="sertifikat">Sertifikat</a>
+						<a class="button" href="http://clicky.id/anchordata">Produk & Layanan</a>
+						<a class="button" href="http://www.linkedin.com/in/tukang-data">Media Sosial</a>
+						<a class="button" href="kontak">Kontak</a>
 
-			</section>
+					</section>
+				</div>
+			</div> <br>
+			<div class="container">
+				<div class="p-4 mb-2 bg-light border 10 border-primary rounded">
+					Mengawali karir sebagai IT Support (1998), berganti karir sebagai Graphic Designer dan Database Administrator (2001 - 2011), sempat menjadi pelaut sejak 2012 - 2026. Saat ini, saya berusaha menggabungkan semua keterampilan dan pengalaman, dengan melayani sektor Maritim dan Logistik sebagai Web Application & BI Developer.
+				</div> 
+			</div>
 		</section>
+		
 	</main>
-	
-
-	<!-- <a href="https://astro.build/blog/astro-6-beta/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
-		>
-		<h2>What's New in Astro 6.0?</h2>
-		<p>
-			Redesigned dev server, fonts, live collections, built-in CSP support, and more! Click to
-			explore Astro 6.0's new features.
-		</p>
-	</a> -->
+<footer class="bg-light text-white text-center p-4 mt-4">
+    <p class="mb-0">
+        Copyright &copy; 2026 || R. M. Fatah Yasin
+    </p>
+</footer>	
 </div>
 
 <style>
