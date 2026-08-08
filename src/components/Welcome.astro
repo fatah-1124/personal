@@ -5,7 +5,12 @@ import background from '../assets/background.svg';
 <script>
   alert('Selamat datang di situs saya.......');
 </script>
-
+<div class="marquee-wrap">
+  <div class="marquee-content">
+    <a href="https://member.jagoanhosting.com/aff.php?aff=7299">..........Anda butuh hosting untuk website dengan harga terjangkau? Silahkan klik tulisan ini......</a> <br>
+	<a href="https://myskill.id/payment/e-learning/zGgyeWtC6KQo2uAWetBR?affiliate=Y9KQ">..........Ingin belajar teknologi komputer secara online? Silahkan klik disini..........</a>
+  </div>
+</div>
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
@@ -82,6 +87,23 @@ import background from '../assets/background.svg';
 </div>
 
 <style>
+.marquee-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  .marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 30s linear infinite;
+  }
+  .marquee-wrap:hover .marquee-content {
+    animation-play-state: paused;
+  }
+  @keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
 	#background {
 		position: fixed;
 		top: 0;
