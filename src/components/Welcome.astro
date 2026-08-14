@@ -1,30 +1,29 @@
 ---
 import '../assets/css/bootstrap.css';
-import background from '../assets/background.svg';
+import '../assets/css/app.css';
 ---
-<div class="marquee-wrap">
+<div class="marquee-wrap bg-light text-dark border 10 border-light text-center p-1 mt-4">
   <div class="marquee-content">
     <a href="https://member.jagoanhosting.com/aff.php?aff=7299">Anda butuh web hosting dengan harga terjangkau? Silahkan klik disini</a> 
   </div>
 </div>
 <div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
 			
 		<section id="hero">
 			<br>
 			<div class="container">
 				<div>
-					<table>
+					<table> 
 						<td>
-							<img src="/logo.jpg" alt="">
+							<img src="/foto2.jpg" alt="foto">
 						</td>
 						<td class="ps-4">
 							<h3>
-							R. Mohammad Fatah Yasin 
-						</h3>
+							R. M. Fatah Yasin 
+							</h3>
 					
-						<h2>Web Application & Business Intelligence Developer</h2>
+						<h2>Web Developer || Business Intelligence Analyst</h2>
 						</td>
 						
 					</table>
@@ -33,8 +32,8 @@ import background from '../assets/background.svg';
 			</div> <br>
 			
 			<div class="container">
-				<div class="p-4 mb-2 bg-light border 10 border-primary rounded">
-					<img src="/foto2.jpg" alt="foto" class="float-start me-3 mb-3" style="max-width: 250px;">	
+				<div class="p-4 mb-2 bg-light border 10 border-danger rounded">
+						
 					<h1>
 						Selamat datang ..................
 					</h1>
@@ -62,20 +61,20 @@ import background from '../assets/background.svg';
 								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item" href="/kontak">Kontak</a></li>
 							</ul>
-						</div> <br> <br> <br>
+						</div>
 						</section>
 				</div>
 			</div> <br>
 			<div class="container">
-				<div class="p-4 mb-2 bg-light border 10 border-primary rounded">
-					Mengawali karir sebagai IT Support (1998), berganti karir sebagai Graphic Designer dan Database Administrator (2001 - 2011), sempat menjadi pelaut sejak 2012 - sekarang. Saat ini, saya berusaha menggabungkan semua keterampilan dan pengalaman, dengan melayani sektor Maritim dan Logistik sebagai Web Application & Business Intelligence Developer.
+				<div class="p-4 mb-2 bg-light border 10 border-warning rounded">
+					Mengawali karir sebagai IT Support (1998), berganti karir sebagai Graphic Designer dan Database Administrator (2001 - 2011), sempat menjadi pelaut sejak 2012 - sekarang. Saat ini, saya berusaha menggabungkan semua keterampilan dan pengalaman, dengan melayani sektor Maritim dan Logistik sebagai Web Developer | Business Intelligence Analyst.
 				</div> 
 			</div>
 		</section>
 		
 	</main>
 
-<footer class="bg-light text-dark text-center p-4 mt-4">
+<footer class="bg-dark text-light text-center p-3 mt-4">
     <p class="mb-0">
         Copyright &copy; 2026 || R. M. Fatah Yasin
     </p>
@@ -91,7 +90,7 @@ import background from '../assets/background.svg';
   .marquee-content {
     display: inline-block;
     padding-left: 100%;
-    animation: scroll-left 15s linear infinite;
+    animation: scroll-left 20s linear infinite;
   }
   .marquee-wrap:hover .marquee-content {
     animation-play-state: paused;
