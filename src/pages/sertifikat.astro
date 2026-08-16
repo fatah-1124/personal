@@ -6,9 +6,6 @@ const images = import.meta.glob('/src/images/sertifikat/*.{jpg,png,jpeg}', { eag
 import Layout from '../layouts/Layout.astro';
 ---
 <br>
-<Layout>
-	<Layout />
-</Layout>
 
 <div class="page-layout">
 	<div class="main-content">
@@ -62,11 +59,9 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</div>
 </div>
-<footer class="bg-dark text-white text-center p-3 mt-5">
-    <p class="mb-0">
-        Copyright &copy; 2026 - R. M. Fatah Yasin, developed with <a href="https://www.astro.build.com">Astro Framework</a>
-    </p>
-</footer>
+<Layout>
+</Layout>
+
 
 <style>
 	.page-layout {
