@@ -3,7 +3,11 @@ import '../assets/css/bootstrap.css';
 import '../assets/css/app.css';
 import Layout from '../layouts/Layout.astro';
 ---
-
+<div class="marquee-wrap bg-light text-dark border 10 text-center p-1 mt-1">
+  <div class="marquee-content">
+    <a href="https://member.jagoanhosting.com/aff.php?aff=7299">Anda butuh web hosting dengan harga terjangkau? Silahkan klik disini</a> 
+  </div>
+</div>
 <br>
 <div class="page-layout">
 	<div class="main-content">
@@ -51,6 +55,23 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+	.marquee-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  .marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 20s linear infinite;
+  }
+  .marquee-wrap:hover .marquee-content {
+    animation-play-state: paused;
+  }
+  @keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
 	.page-layout {
 		display: flex;
 		width: 100%;

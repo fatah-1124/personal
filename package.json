@@ -12,6 +12,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.1.6"
+    "astro": "^7.2.2",
+    "astro-seo": "^1.1.0",
+    "astro-social-share": "^2.2.0",
+    "mdast-util-to-string": "^4.0.0",
+    "reading-time": "^1.5.0"
   }
 }

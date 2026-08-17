@@ -1,0 +1,193 @@
+---
+import { SEO } from 'astro-seo';
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+import Share from '../../components/Share.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
+import { getFormattedDate } from '../../utils/global';
+
+export const getStaticPaths = async () => {
+    const blogPosts = await getCollection('blog');
+
+    return blogPosts.map((post) => ({
+        params: { slug: post.id },
+        props: { post },
+    }));
+};
+
+const { post } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await render(post);
+
+// Fallback nilai agar TypeScript tidak komplain 'undefined' / 'Date'
+const title = post.data.title ?? 'Blog Post';
+const excerpt = post.data.excerpt ?? '';
+const imageUrl = post.data.image ?? '';
+const publishedAtString = post.data.publishedAt 
+    ? new Date(post.data.publishedAt).toISOString() 
+    : (post.data.date ? new Date(post.data.date).toISOString() : '');
+---
+
+<MainLayout title={title}>
+    <SEO
+        slot='seo'
+        title={title}
+        description={excerpt}
+        openGraph={{
+            basic: {
+                type: 'website',
+                title: title,
+                image: imageUrl,
+            },
+            image: {
+                alt: 'Thumbnail',
+            },
+        }}
+    />
+
+    <main class='mt-content'>
+        <div class='content-header'>
+            <h1>
+                {title}
+            </h1>
+            <div class='meta'>
+                <div class='text'>
+                    <p>
+                        {post.data.author ?? 'Admin'}
+                    </p>
+                    <div>
+                        <time datetime={publishedAtString}>
+                            {post.data.date ? getFormattedDate(post.data.date) : ''}
+                        </time>
+
+                        <span> &bull; </span>
+                        <p>{remarkPluginFrontmatter.minutesRead}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <Share />
+
+        {imageUrl && (
+            <div class='picture'>
+                <Image inferSize src={imageUrl} alt={title} />
+            </div>
+        )}
+        
+        <div class='content'>
+            <Content />
+        </div>
+
+        <Share />
+
+        <!-- Disqus Comment Goes Here! -->
+        <div id='disqus_thread'></div>
+    </main>
+</MainLayout>
+
+<script
+    is:inline
+    define:vars={{ PAGE_URL: Astro.url.href, PAGE_IDENTIFIER: post.id }}
+>
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;
+        this.page.identifier = PAGE_IDENTIFIER;
+    };
+    (function () {
+        var d = document,
+            s = d.createElement('script');
+        s.src = 'https://astro-news-portal.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<style>
+    main {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 64rem;
+        padding: 6rem 2rem;
+        background-color: #fff;
+        margin: 0 auto;
+    }
+
+    main .content-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    main .meta {
+        display: flex;
+        font-size: 0.875rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    main .meta > div {
+        margin-right: 1rem;
+    }
+
+    main .meta .image {
+        width: 52px;
+        height: 52px;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    main .meta .image img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 9999px;
+    }
+
+    main .meta .text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    main .meta .text > p {
+        font-size: 1.25rem;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+
+    main .meta .text div:last-child {
+        display: flex;
+        color: #737373;
+    }
+
+    main .meta .text div:last-child span {
+        margin: 0 0.5rem;
+    }
+
+    main .content-header h1 {
+        max-width: 768px;
+    }
+
+    main .picture {
+        height: 500px;
+        border-radius: 0.5rem;
+    }
+
+    main .picture img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        border-radius: 0.5rem;
+    }
+
+    main #disqus_thread {
+        margin-top: 4rem;
+    }
+
+    main .astro-social-share {
+        background-color: aqua;
+    }
+</style>
