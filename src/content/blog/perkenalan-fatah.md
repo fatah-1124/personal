@@ -15,17 +15,17 @@ Perjalanan profesional saya dimulai jauh sebelum saya melaut:
 - **1998** — Memulai karier di bidang **IT support**
 - **2002** — Merambah ke **desain grafis**
 - **2010** — Mendalami **administrasi basis data (database administration)**
-- **2014** — Memulai karier sebagai pelaut, mengawali posisi sebagai **Oiler/Motorman**
+- **2014** — Memulai karier sebagai pelaut, mengawali posisi sebagai **Wiper**
 
-Sejak 2014, saya telah mengumpulkan lebih dari **12 tahun pengalaman pelayaran internasional** sebagai **Marine Engine Rating / Oiler**, bekerja di berbagai jenis kapal — mulai dari bulk carrier (Handysize hingga Capesize), kapal tanker LNG, hingga kapal offshore — di bawah operator asal Korea, Jepang, dan internasional lainnya. Saat ini saya sedang menjalani kontrak di atas **MV T. Clever** bersama STX Ocean Service.
+Sejak 2014, saya telah mengumpulkan lebih dari **12 tahun pengalaman pelayaran internasional** sebagai **Marine Engine Rating / Oiler**, bekerja di berbagai jenis kapal — mulai dari bulk carrier (Handysize hingga Capesize) hingga kapal tanker LNG — di bawah operator asal Korea, Jepang, dan internasional lainnya. 
 
 Pengalaman lintas bidang ini — dari IT, desain, basis data, hingga dunia maritim — menjadi fondasi bagi arah karier saya berikutnya di bidang data.
 
 ## Pendidikan
 
-Saat ini saya sedang menempuh **S1 Ilmu Komputer di STEKOM**, dengan target penyelesaian sekitar tahun 2028. Perkuliahan ini mencakup materi seperti UML, pengembangan web berbasis PHP, VB.NET, hingga dasar-dasar akuntansi.
+Saat ini saya sedang menempuh **S1 Sistem Informasi di STEKOM**, dengan target penyelesaian sekitar tahun 2028. Perkuliahan ini mencakup materi seperti UML, pengembangan web berbasis PHP, VB.NET, Manajemen Database, hingga dasar-dasar Akuntansi dan Manajemen Kewirausahaan.
 
-Selain pendidikan formal, saya juga aktif memperkuat kompetensi melalui sertifikasi di bidang data, termasuk **PL-300 (Power BI Data Analyst Associate)**, serta sertifikasi tambahan dari MySkill, IT Box, dan Coding Studio.
+Selain pendidikan formal, saya juga aktif memperkuat kompetensi melalui sertifikasi di bidang data, termasuk **PL-300 (Power BI Data Analyst Associate)**, serta sertifikasi tambahan dari MySkill, IT Box, Codepolitan, DQ Lab, dan Coding Studio.
 
 ## Ke Depan
 

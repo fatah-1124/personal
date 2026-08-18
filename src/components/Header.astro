@@ -1,11 +1,31 @@
 ---
-
+import '../assets/css/global.css';
 ---
 
-<nav class='navbar fixed-top bg-dark' data-bs-theme='dark'>
-	<div class='container-fluid justify-content-center text-white'>
-		<h3>
-			DeepWater Solution
-		</h3>
-	</div>
+<!-- <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+
+<nav class="navbar navbar-expand-lg fixed-top bg-dark" data-bs-theme="primary">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="/beranda">
+            <h3 class="m-0">DeepWater Solution</h3>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+            aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto gap-2">
+                <li class="nav-item"><a class="btn btn-light" href="/profil">Profil</a></li>
+                <li class="nav-item"><a class="btn btn-light" href="/pendidikan">Pendidikan</a></li>
+                <li class="nav-item"><a class="btn btn-light" href="/pekerjaan">Pekerjaan</a></li>
+                <li class="nav-item"><a class="btn btn-light" href="/portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="btn btn-light" href="/sertifikat">Sertifikat</a></li>
+                <li class="nav-item"><a class="btn btn-light" href="/layanan">Produk & Layanan</a></li>
+                <li class="nav-item"><a class="btn btn-light" href="/kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
