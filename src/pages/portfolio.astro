@@ -1,10 +1,12 @@
 ---
-import '../assets/css/bootstrap.css';
-import '../assets/css/app.css';
 import { Image } from 'astro:assets';
 const images = import.meta.glob('/src/images/portfolio/*.{jpg,png,jpeg}', { eager: true });
 import Layout from '../layouts/Layout.astro';
 ---
+<Layout
+    title="Portfolio - DeepWater Solution"
+    description="Contoh hasil kerja kami"
+>
 <br>
 
 <div class="page-layout">
@@ -25,7 +27,6 @@ import Layout from '../layouts/Layout.astro';
 								<li><a class="dropdown-item" href="portfolio">Portfolio</a></li>
 								<li><a class="dropdown-item" href="sertifikat">Sertifikat</a></li>
 								<li><a class="dropdown-item" href="layanan">Produk & Layanan</a></li>
-								<li><a class="dropdown-item" href="contohDashboard">Contoh Dashboard</a></li>
 								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item" href="/kontak">Kontak</a></li>
 							</ul>
@@ -55,10 +56,7 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</div>
 </div>
-<Layout>
 </Layout>
-
-
 <style>
 	.looker-embed-wrapper {
   position: relative;

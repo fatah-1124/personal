@@ -1,8 +1,10 @@
 ---
-import '../assets/css/bootstrap.css';
-import '../assets/css/app.css';
 import Layout from '../layouts/Layout.astro';
 ---
+<Layout
+    title="Profil - DeepWater Solution"
+    description="Profil dan riwayat karier R. M. Fatah Yasin"
+>
 <div class="marquee-wrap bg-light text-dark border 10 text-center p-1 mt-1">
   <div class="marquee-content">
     <a href="https://member.jagoanhosting.com/aff.php?aff=7299">Anda butuh web hosting dengan harga terjangkau? Silahkan klik disini</a> 
@@ -27,7 +29,6 @@ import Layout from '../layouts/Layout.astro';
 								<li><a class="dropdown-item" href="portfolio">Portfolio</a></li>
 								<li><a class="dropdown-item" href="sertifikat">Sertifikat</a></li>
 								<li><a class="dropdown-item" href="layanan">Produk & Layanan</a></li>
-								<li><a class="dropdown-item" href="contohDashboard">Contoh Dashboard</a></li>
 								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item" href="/kontak">Kontak</a></li>
 							</ul>
@@ -51,9 +52,7 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</div>
 </div>
-<Layout>
 </Layout>
-
 <style>
 	.marquee-wrap {
     overflow: hidden;
