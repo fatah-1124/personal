@@ -1,3 +1,8 @@
+---
+title: "Mengapa Saya Memilih Framework Daripada AI?"
+description: "Pentingnya fondasi pemahaman logika pemrograman di era AI yang semakin canggih"
+date: 2026-08-17
+---
 # Mengapa Saya Memilih Framework Tertentu untuk Membangun Website, Bukan Hanya Sekadar Memberikan Prompt pada AI
 
 Beberapa bulan terakhir saya cukup sering ditanya, biasanya oleh sesama pelaut yang penasaran dengan "kesibukan darat" saya: *"Kenapa nggak tinggal minta AI aja bikinin website-nya? Kan sekarang tinggal ngetik prompt, jadi."*
