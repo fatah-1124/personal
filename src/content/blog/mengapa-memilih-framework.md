@@ -1,6 +1,7 @@
 ---
 title: "Mengapa Saya Memilih Framework Daripada AI?"
 description: "Pentingnya fondasi pemahaman logika pemrograman di era AI yang semakin canggih"
+author: "R. M. Fatah Yasin"
 date: 2026-08-17
 ---
 # Mengapa Saya Memilih Framework Tertentu untuk Membangun Website, Bukan Hanya Sekadar Memberikan Prompt pada AI
@@ -31,7 +32,7 @@ Kalau saya hanya mengandalkan prompt tanpa menetapkan arsitektur di awal, AI tid
 
 ## 3. Saya Perlu Bisa Membaca dan Mempertanggungjawabkan Kodenya
 
-Saya sedang menempuh S1 Ilmu Komputer sambil membangun praktik konsultasi data saya sendiri. Salah satu hal yang saya pegang adalah: saya tidak ingin menjadi orang yang hanya bisa menyalakan hasil kerja AI tanpa memahami mengapa hasil itu bekerja.
+Saya sedang menempuh S1 Sistem Informasi sambil membangun praktik konsultasi data saya sendiri. Salah satu hal yang saya pegang adalah: saya tidak ingin menjadi orang yang hanya bisa menyalakan hasil kerja AI tanpa memahami mengapa hasil itu bekerja.
 
 Ketika saya memilih framework terlebih dahulu, saya sedang memilih bahasa dan pola yang saya pahami secara sadar — sehingga ketika AI membantu menuliskan sebagian kode, saya tetap bisa membaca, mengevaluasi, dan memperbaikinya sendiri. Ini penting terutama untuk proyek yang melibatkan data pengguna, seperti data kontak pelaut di portal kerja. Saya perlu tahu persis bagaimana data itu disimpan dan diakses, bukan sekadar mempercayai bahwa "AI pasti sudah menanganinya dengan benar".
 

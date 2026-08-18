@@ -1,6 +1,7 @@
 ---
 title: "Pentingnya Fondasi Bahasa Pemrograman bagi Programmer, Meski AI Sudah Canggih"
 description: "Mengapa memahami fondasi bahasa pemrograman tetap krusial bagi software developer, meskipun AI code generator semakin canggih."
+author: "R.M. Fatah Yasin"
 date: 2026-08-17
 ---
 

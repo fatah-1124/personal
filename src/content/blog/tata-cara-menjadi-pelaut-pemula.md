@@ -1,6 +1,7 @@
 ---
 title: "Tata Cara Menjadi Pelaut bagi Pemula: Panduan Lengkap Memulai Karier di Laut"
 description: "Panduan singkat untuk pemula yang ingin memulai karier sebagai pelaut, mulai dari syarat, jalur pendidikan, dokumen wajib, hingga cara mendapatkan kapal pertama."
+author: "R.M. Fatah Yasin"
 date: 2026-08-17
 ---
 

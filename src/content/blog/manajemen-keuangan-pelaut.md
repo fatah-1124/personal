@@ -1,6 +1,7 @@
 ---
 title: "Manajemen Keuangan Praktis dan Strategis untuk Pelaut"
 description: "Panduan singkat mengelola penghasilan pelaut yang datang secara musiman — dari anggaran praktis hingga strategi keuangan jangka panjang."
+author: "R.M. Fatah Yasin"
 date: 2026-08-17
 ---
 

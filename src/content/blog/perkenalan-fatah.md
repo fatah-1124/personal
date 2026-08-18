@@ -1,6 +1,7 @@
 ---
 title: "Sekilas Tentang Saya"
 description: "Mengenal lebih dekat perjalanan pendidikan dan riwayat pekerjaan di balik DeepWater — dari IT support, pelaut, hingga data consultant."
+author: "R.M. Fatah Yasin"
 date: 2026-08-17
 ---
 
