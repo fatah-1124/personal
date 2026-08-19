@@ -13,7 +13,7 @@ import Layout from '../layouts/Layout.astro';
 		<div id="container">
 			<main>
 				<div class="container">	
-					<div class="p-4 mb-2 bg-light border 10 border-primary rounded">
+					<div class="p-4 mb-2 bg-body border 10 border-card-highlight rounded">
 						<div class="dropdown">
   							<button class="btn btn-primary dropdown-toggle" type="button" 
           							data-bs-toggle="dropdown" aria-expanded="false">
@@ -62,20 +62,6 @@ import Layout from '../layouts/Layout.astro';
   height: 100%;
   border: 0;
 }
-	.page-layout {
-		display: flex;
-		width: 100%;
-	}
-
-	.sidebar {
-		flex: 0 0 auto;
-	}
-
-	.main-content {
-		flex: 1 1 auto;
-		min-width: 0; /* penting: biar grid di dalamnya bisa menyusut/melebar dengan benar */
-	}
-
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

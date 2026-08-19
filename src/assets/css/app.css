@@ -1,0 +1,32 @@
+:root {
+    --color-primary: #0d1b2a;
+    --color-secondary: #1b263b;
+    --color-accent: #00b4d8;
+    --color-accent-warm: #e0a458;
+    --color-bg: #f5f7fa;
+    --color-text: #212529;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.hero-section {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+}
+
+.btn-accent:hover {
+    background-color: #0096b8;
+}
+
+.card-highlight {
+    border-left: 4px solid var(--color-accent);
+}

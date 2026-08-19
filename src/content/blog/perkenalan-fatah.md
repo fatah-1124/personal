@@ -18,7 +18,7 @@ Perjalanan profesional saya dimulai jauh sebelum saya melaut:
 - **2010** — Mendalami **administrasi basis data (database administration)**
 - **2014** — Memulai karier sebagai pelaut, mengawali posisi sebagai **Wiper**
 
-Sejak 2014, saya telah mengumpulkan lebih dari **12 tahun pengalaman pelayaran internasional** sebagai **Marine Engine Rating / Oiler**, bekerja di berbagai jenis kapal — mulai dari bulk carrier (Handysize hingga Capesize) hingga kapal tanker LNG — di bawah operator asal Korea, Jepang, dan internasional lainnya. 
+Sejak 2014, saya telah mengumpulkan lebih dari **12 tahun pengalaman pelayaran internasional** sebagai **Marine Engine Rating / Oiler**, bekerja di berbagai jenis kapal — mulai dari bulk carrier (Handysize hingga Capesize) hingga kapal tanker LNG — di bawah operator asal Korea Selatan dan Jepang. 
 
 Pengalaman lintas bidang ini — dari IT, desain, basis data, hingga dunia maritim — menjadi fondasi bagi arah karier saya berikutnya di bidang data.
 
