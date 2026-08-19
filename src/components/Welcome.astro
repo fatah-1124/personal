@@ -1,7 +1,6 @@
 ---
 import HeaderAstroComponent from '../components/Header.astro';
 import '../assets/css/bootstrap.css';
-// import '../assets/css/app.css';
 import { getCollection } from 'astro:content';
 
 // 1. Ambil semua data koleksi 'blog'
@@ -23,8 +22,11 @@ const blogPosts = await getCollection('blog');
 					<img src="/ship1.jpg" alt="" class="float-start me-3 mb-3" style="max-width:400px;">
 					Mengawali karir sebagai IT Support (1998), berganti karir sebagai Graphic Designer dan Database Administrator (2001 - 2011), sempat menjadi pelaut sejak 2012 - sekarang. Saat ini, saya berusaha menggabungkan semua keterampilan dan pengalaman, dengan melayani sektor Maritim dan Logistik sebagai Web Developer || Data Analyst. Bagi siapapun yang membutuhkan solusi dalam hal ini, silahkan hubungi saya melalui <a class="btn btn-primary" href="http://wa.me/6285648013129">Whatsapp</a>. Saya terbuka untuk kolaborasi.
 					<br> <br><br>
-					<a class="btn btn-primary" href="contohDashboard">Contoh Dashboard Analisis Keuangan</a><br><br>
-					<a class="btn btn-primary" href="https://softdemo-production.up.railway.app">Coba Gratis Sistem Kasir dan Manajemen Stok</a>
+					<div class="container d-flex flex-column flex-sm-row gap-3">
+						<a class="btn btn-primary" href="contohDashboard" role="button">Contoh Dashboard Analisis</a>
+						<a class="btn btn-primary" href="https://softdemo-production.up.railway.app" role="button">Contoh Manajemen Stok</a>
+					</div>
+					
 					<br>	
 					<br>
 					<h2>Daftar Artikel</h2>
@@ -47,7 +49,10 @@ const blogPosts = await getCollection('blog');
 		</section>
 	</main>
 </div>	
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <style>
   .blog-section {
     max-width: 64rem;
