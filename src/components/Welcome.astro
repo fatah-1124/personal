@@ -1,18 +1,16 @@
 ---
 import HeaderAstroComponent from '../components/Header.astro';
 import { getCollection } from 'astro:content';
-
+import '../components/Card.astro';
 // 1. Ambil semua data koleksi 'blog'
 const blogPosts = await getCollection('blog');
+
 ---
 <HeaderAstroComponent>
 </HeaderAstroComponent>
-<br><br><br><br><br>
-<div id="container">
-	<main>
-			
-		<section id="hero">
-			<div class="container">
+
+	<body>
+		<div class="container">
 				<div class="p-4 mb-2 bg-body border 10 border-card-highlight rounded">
 					<h1>
 						Solusi Sistem Informasi Terpadu untuk Sektor Maritim & Logistik
@@ -25,26 +23,25 @@ const blogPosts = await getCollection('blog');
 						<a class="btn btn-accent" href="contohDashboard" role="button">Contoh Dashboard Analisis</a>
 						<a class="btn btn-accent" href="https://softdemo-production.up.railway.app" role="button">Contoh Manajemen Stok</a>
 					</div>
-					
-					<br>	
 					<br>
 					<h2>Daftar Artikel</h2>
-
-					<ul>
-						{
-						blogPosts.map((post) => (
-							<li>
-							{/* Link mengarah ke rute detail blog berdasarkan post.id */}
-							<a href={`/blog/${post.id}`}>
-								{post.data.title ?? 'Tanpa Judul'}
-							</a>
-							</li>
-						))
-						}
-					</ul>
-					
+					<main class='container'>
+						<div>
+							<ul>
+								{
+									blogPosts.map((post) => (
+									<li>
+									<a href={`/blog/${post.id}`}>
+										{post.data.title ?? 'Tanpa Judul'}
+									</a>
+									</li>
+								))
+								}
+							</ul>
+						</div>
+					</main>
 				</div> 
 			</div>
-		</section>
-	</main>
-</div>	
+	</body>
+		
+	
