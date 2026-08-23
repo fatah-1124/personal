@@ -24,10 +24,10 @@ Pengalaman lintas bidang ini — dari IT, desain, basis data, hingga dunia marit
 
 ## Pendidikan
 
-Saat ini saya sedang menempuh **S1 Sistem Informasi di STEKOM**, dengan target penyelesaian sekitar tahun 2028. Perkuliahan ini mencakup materi seperti UML, pengembangan web berbasis PHP, VB.NET, Manajemen Database, hingga dasar-dasar Akuntansi dan Manajemen Kewirausahaan.
+Saat ini saya sedang menempuh **S1 Sistem Informasi di Universitas Sains dan Teknologi Komputer**, dengan target penyelesaian sekitar tahun 2028. Perkuliahan ini mencakup materi seperti UML, pengembangan web berbasis PHP, VB.NET, Manajemen Database, hingga dasar-dasar Akuntansi dan Manajemen Kewirausahaan.
 
-Selain pendidikan formal, saya juga aktif memperkuat kompetensi melalui sertifikasi di bidang data, termasuk **PL-300 (Power BI Data Analyst Associate)**, serta sertifikasi tambahan dari MySkill, IT Box, Codepolitan, DQ Lab, dan Coding Studio.
+Selain pendidikan formal, saya juga aktif memperkuat kompetensi melalui sertifikasi di bidang data, termasuk **PL-300 (Power BI Data Analyst Associate)**, serta sertifikasi tambahan dari MySkill, IT Box, Codepolitan, DQ Lab, dan Coding Studio, untuk mendalami bidang Web Development, Full-Stack Engineering, Database Management dan Cybersecurity.
 
 ## Ke Depan
 
-Menggabungkan pengalaman bertahun-tahun di laut dengan kemampuan teknis di bidang data, saya sedang membangun jalur karier sebagai **Maritime Data Consultant** — menjembatani dunia pelayaran dengan pengambilan keputusan berbasis data bagi industri maritim dan logistik.
+Menggabungkan pengalaman bertahun-tahun di laut dengan kemampuan teknis di bidang data, saya sedang membangun jalur karier sebagai **Full-Stack Data & Software Engineer** — menjembatani dunia pelayaran dengan pengambilan keputusan berbasis data, serta transformasi digital bagi industri maritim dan logistik.
