@@ -65,4 +65,35 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</div>
 </div>
+
+<div class="page-layout">
+    <div class="main-content">
+        <div id="container">
+            <main>
+                <div class="container">	
+                    <div class="p-4 mb-2 bg-body border 10 border-card-highlight rounded">
+                        <h3>Saran & Kritik</h3>
+                        <p>Silahkan kirimkan komentar, saran atau kritik Anda.</p>
+                        <form action="/api/artikel" method="POST">
+                            
+                            <div class="mb-3">
+                                <label for="author" class="form-label">Nama</label>
+                                <input type="text" class="form-control" id="author" name="author" required>
+                            </div>
+							<div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="content" class="form-label">Komentar/saran/kritik</label>
+                                <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
+                            </div>
+                            <a class="btn btn-dark" href="mailto:fatah@deepwater.my.id">Submit</a>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
 </Layout>

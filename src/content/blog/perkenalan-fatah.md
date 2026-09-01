@@ -20,7 +20,7 @@ Perjalanan profesional saya dimulai jauh sebelum saya melaut:
 
 Sejak 2014, saya telah mengumpulkan lebih dari **12 tahun pengalaman pelayaran internasional** sebagai **Marine Engine Rating / Oiler**, bekerja di berbagai jenis kapal — mulai dari bulk carrier (Handysize hingga Capesize) hingga kapal tanker LNG — di bawah operator asal Korea Selatan dan Jepang. 
 
-Pengalaman lintas bidang ini — dari IT, desain, basis data, hingga dunia maritim — menjadi fondasi bagi arah karier saya berikutnya di bidang data.
+Pengalaman lintas bidang ini — dari IT, desain, basis data, hingga dunia maritim — menjadi fondasi bagi arah karier saya berikutnya di bidang Data Management dan Software Development.
 
 ## Pendidikan
 
@@ -30,4 +30,4 @@ Selain pendidikan formal, saya juga aktif memperkuat kompetensi melalui sertifik
 
 ## Ke Depan
 
-Menggabungkan pengalaman bertahun-tahun di laut dengan kemampuan teknis di bidang data, saya sedang membangun jalur karier sebagai **Full-Stack Developer** — menjembatani dunia pelayaran dengan pengambilan keputusan berbasis data, serta pengembangan aplikasi berbasis data bagi industri maritim dan logistik.
+Menggabungkan pengalaman bertahun-tahun di laut dengan kemampuan teknis di bidang data, saya sedang membangun jalur karier sebagai **Software Developer** — menjembatani dunia pelayaran dengan pengambilan keputusan berbasis data, serta pengembangan aplikasi berbasis data bagi industri maritim dan logistik.

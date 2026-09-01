@@ -11,11 +11,15 @@ import '../assets/css/global.css';
                 <div class="container">	
                     <div class="p-4 mb-2 bg-body border 10 border-card-highlight rounded">
                         <h3>Input Artikel</h3>
-                        <p>Silahkan isi form dibawah ini untuk menambahkan artikel baru.</p>
+                        <p>Silahkan isi form dibawah ini untuk menambahkan artikel baru. Semua artikel yang masuk akan melalui proses review dalam 24 jam. Bila tidak bertentangan dengan kebijakan kami dan norma yang berlaku di masyarakat, artikel akan segera diposting di situs ini.</p>
                         <form action="/api/artikel" method="POST">
                             <div class="mb-3">
                                 <label for="title" class="form-label">Judul Artikel</label>
                                 <input type="text" class="form-control" id="title" name="title" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="author" class="form-label">Penulis</label>
+                                <input type="text" class="form-control" id="author" name="author" required>
                             </div>
                             <div class="mb-3">
                                 <label for="content" class="form-label">Konten Artikel</label>

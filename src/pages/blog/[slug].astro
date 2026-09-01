@@ -3,7 +3,7 @@ import { SEO } from 'astro-seo';
 import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
 import Share from '../../components/Share.astro';
-import MainLayout from '../../layouts/MainLayout.astro';
+import Layout from '../../layouts/ArtLayout.astro';
 import { getFormattedDate } from '../../utils/global';
 
 export const getStaticPaths = async () => {
@@ -27,7 +27,7 @@ const publishedAtString = post.data.publishedAt
     : (post.data.date ? new Date(post.data.date).toISOString() : '');
 ---
 
-<MainLayout title={title}>
+<Layout title={title}>
     <SEO
         slot='seo'
         title={title}
@@ -44,14 +44,16 @@ const publishedAtString = post.data.publishedAt
         }}
     />
         
-    <main class='mt-content'>
-        <div class='content-header'>
+    
+<div class="container">
+    <div class="p-4 mb-2 bg-body rounded">
+        <div class='content-header text-center '>
             <h1>
                 {title}
             </h1>
             
             <div class='meta'>
-                <div class='text'>
+                <div class='text-center'>
                     <p>
                         {post.data.author ?? 'Admin'}
                     </p>
@@ -66,27 +68,21 @@ const publishedAtString = post.data.publishedAt
                 </div>
             </div>
         </div>
-
-        <Share />
-
-        {imageUrl && (
-            <div class='picture'>
-                <Image inferSize src={imageUrl} alt={title} />
-            </div>
-        )}
-        
+         <Share />
         <div class='content'>
             <Content />
         </div>
 
-        <Share />
+       
         
 
         <!-- Disqus Comment Goes Here! -->
         <div id='disqus_thread'></div>
-    </main>
+    </div>
+</div>
     
-</MainLayout>
+    
+</Layout>
 
 <script
     is:inline

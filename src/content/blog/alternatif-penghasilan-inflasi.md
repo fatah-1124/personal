@@ -1,5 +1,5 @@
 ---
-title: "Alternatif Mencari Penghasilan di Tengah Sempitnya Lapangan Kerja dan Inflasi yang Meningkat"
+title: "Alternatif Mencari Penghasilan"
 description: "Strategi mencari sumber penghasilan tambahan saat lapangan kerja formal makin terbatas, inflasi naik, dan daya beli masyarakat menurun."
 author: "R.M. Fatah Yasin"
 date: 2026-08-17

@@ -1,5 +1,5 @@
 ---
-title: "Strategi Mempersiapkan Masa Pensiun bagi Pelaut"
+title: "Strategi Pensiun bagi Pelaut"
 description: "Panduan singkat merencanakan masa pensiun sejak dini bagi pelaut, mengingat keterbatasan usia kerja dan tuntutan fisik profesi ini."
 author: "R.M. Fatah Yasin"
 date: 2026-08-17

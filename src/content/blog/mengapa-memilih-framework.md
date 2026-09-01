@@ -6,9 +6,9 @@ date: 2026-08-17
 ---
 # Mengapa Saya Memilih Framework Tertentu untuk Membangun Website, Bukan Hanya Sekadar Memberikan Prompt pada AI
 
-Beberapa bulan terakhir saya cukup sering ditanya, biasanya oleh sesama pelaut yang penasaran dengan "kesibukan darat" saya: *"Kenapa nggak tinggal minta AI aja bikinin website-nya? Kan sekarang tinggal ngetik prompt, jadi."*
+Beberapa bulan terakhir saya cukup sering ditanya, biasanya oleh sesama pelaut yang penasaran dengan "kesibukan darat" saya: *"Kenapa nggak minta AI aja bikinin website-nya? Kan sekarang tinggal ngetik prompt, jadi."*
 
-Pertanyaan itu wajar. Alat-alat AI generatif memang sudah sangat mampu memuntahkan halaman HTML yang rapi hanya dari satu-dua kalimat perintah. Tapi setiap kali saya membangun sesuatu — entah itu landing page pribadi, portal kerja untuk pelaut, atau aplikasi kasir untuk UMKM — saya tetap memilih dan menetapkan framework terlebih dahulu, baru kemudian AI saya libatkan sebagai alat bantu di dalam struktur itu, bukan sebagai pengganti struktur itu sendiri.
+Pertanyaan itu wajar. Alat-alat AI generatif memang sudah sangat mampu memuntahkan halaman HTML yang rapi hanya dari satu-dua kalimat perintah. Tapi setiap kali saya membangun sesuatu — entah itu landing page pribadi, portal kerja untuk pelaut, atau aplikasi kasir untuk UMKM — saya tetap memilih dan menetapkan framework terlebih dahulu, baru kemudian AI saya libatkan sebagai alat bantu di dalam struktur itu (mempercepat penulisan kode), bukan sebagai pengganti struktur itu sendiri.
 
 Berikut alasan-alasannya.
 
@@ -44,6 +44,6 @@ Dengan kata lain, menetapkan framework bukan langkah yang berlawanan dengan mema
 
 ## Kesimpulan: AI Sebagai Alat, Bukan Arsitek
 
-Saya tetap menggunakan AI hampir di setiap proyek yang saya kerjakan — untuk mempercepat penulisan boilerplate, mencari solusi bug, atau membantu menyusun query. Tapi keputusan tentang *apa* yang saya bangun dan *bagaimana* fondasinya disusun, itu tetap saya ambil sendiri terlebih dahulu.
+Saya tetap menggunakan AI di beberapa proyek yang saya kerjakan — untuk mempercepat penulisan boilerplate, mencari solusi bug, atau membantu menyusun query. Tapi keputusan tentang *apa* yang saya bangun dan *bagaimana* fondasinya disusun, itu tetap saya ambil sendiri terlebih dahulu. Intinya, saya membangun aplikasi web/desktop tetap menggunakan framework dari bahasa pemrograman tertentu, tetap menulis kode. AI hanya membantu mempercepat penulisan kode. Jadi, memberi perintah pada AI dengan prompt tertentu untuk langsung membuat aplikasi desktop/web/mobile, **bukanlah cara saya** dalam menggunakan AI. Karena itulah, walaupun saat ini banyak AI Generatif yang bermunculan, saya tetap memilih GitHub Copilot untuk membantu mempercepat penulisan kode program. Karena pada saat saya menulis kode di VS Code, Copilot akan memberi saran, dan membantu mempercepat penulisan kode (bukan sekedar prompt mentah tanpa memahami flowchart dan logika algoritma).
 
-Bagi saya, memilih framework adalah cara untuk tetap menjadi pengambil keputusan dalam proyek saya sendiri — bukan sekadar operator yang menunggu AI memutuskan arah, satu prompt pada satu waktu.
+Bagi saya, memilih framework adalah cara untuk tetap menjadi pengambil keputusan dalam proyek saya sendiri — bukan sekadar operator yang menunggu AI memutuskan arah, satu prompt pada satu waktu. Dan satu hal yang perlu saya tegaskan, bahwa saya terus belajar sebagai **Progammer/Software Developer**, bukan sekedar **Vibe Coder** yang tidak memahami logika pemrograman.

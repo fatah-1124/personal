@@ -5,12 +5,12 @@ interface Props {
 }
 
 const {
-    title = 'R.M. Fatah Yasin - Software Developer',
-    description = 'Solusi sistem informasi untuk sektor maritim dan logistik, oleh R. M. Fatah Yasin.',
+    title = 'R.M. Fatah Yasin - Engine Rating',
+    description = 'Curriculum Vitae',
 } = Astro.props;
 import '../assets/css/app.css';
-import '../assets/css/global.css';
-import HeaderAstroComponent from '../components/Header.astro';
+import '../assets/css/style.css';
+import HeaderAstroComponent from '../components/CVNavbar.astro';
 ---
 <!doctype html>
 <html lang="en">
@@ -39,14 +39,18 @@ import HeaderAstroComponent from '../components/Header.astro';
     <body>
 		<HeaderAstroComponent />
 		<slot />
+        
         <footer class="bg-dark text-white text-center p-1 mt-5">
             <p>
-                Copyright &copy; 2026 || R. M. Fatah Yasin || based on JavaScript
+                Supported by :  <a class="btn btn-light" href="/beranda">DeepWater Solution</a>
             </p>
         </footer>
     </body>
 </html>
 <style>
+	body {
+	margin-top: 60px;
+	}
 	.page-layout {
 		display: flex;
 		width: 100%;

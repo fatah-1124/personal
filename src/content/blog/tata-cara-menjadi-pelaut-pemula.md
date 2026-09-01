@@ -36,7 +36,7 @@ Ini adalah bagian yang paling sering membingungkan pemula. Dokumen dasar yang wa
 2. **Sertifikat BST (Basic Safety Training)** — pelatihan keselamatan dasar yang wajib bagi semua pelaut
 3. **Sertifikat kompetensi** sesuai jalur (ANT/ATT untuk perwira, atau sertifikat rating untuk non-perwira)
 4. **Paspor** — untuk pelayaran internasional
-5. **Medical Certificate** dari rumah sakit/klinik yang terakreditasi
+5. **Medical Certificate** dari rumah sakit/klinik yang terakreditasi (beberapa perusahaan kadang menanggung biayanya, bagi yang lulus seleksi)
 
 ## 4. Cari Pengalaman dan Bangun Jaringan
 
