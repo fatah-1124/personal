@@ -36,23 +36,28 @@ export const POST: APIRoute = async ({ request }) => {
 		return redirect(request, 'error');
 	}
 
-	const response = await fetch('https://api.resend.com/emails', {
-		method: 'POST',
-		headers: {
-			Authorization: `Bearer ${apiKey}`,
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({
-			from,
-			to: [recipient],
-			reply_to: email,
-			subject: `Saran dan kritik dari ${author}`,
-			text: `Nama: ${author}\nEmail: ${email}\n\nKomentar:\n${content}`,
-		}),
-	});
+	try {
+		const response = await fetch('https://api.resend.com/emails', {
+			method: 'POST',
+			headers: {
+				Authorization: `Bearer ${apiKey}`,
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				from,
+				to: [recipient],
+				reply_to: email,
+				subject: `Saran dan kritik dari ${author}`,
+				text: `Nama: ${author}\nEmail: ${email}\n\nKomentar:\n${content}`,
+			}),
+		});
 
-	if (!response.ok) {
-		console.error('Resend gagal mengirim email:', await response.text());
+		if (!response.ok) {
+			console.error('Resend gagal mengirim email:', await response.text());
+			return redirect(request, 'error');
+		}
+	} catch (error) {
+		console.error('Koneksi ke Resend gagal:', error);
 		return redirect(request, 'error');
 	}
 
