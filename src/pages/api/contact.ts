@@ -4,9 +4,12 @@ export const prerender = false;
 
 const recipient = import.meta.env.CONTACT_RECIPIENT_EMAIL ?? 'fatah@deepwater.my.id';
 
-function redirect(request: Request, status: 'sent' | 'error') {
+function redirect(request: Request, status: 'sent' | 'error', reason?: string) {
 	const url = new URL('/kontak', request.url);
 	url.searchParams.set(status, '1');
+	if (reason) {
+		url.searchParams.set('reason', reason);
+	}
 	return Response.redirect(url, 303);
 }
 
@@ -16,7 +19,7 @@ export const POST: APIRoute = async ({ request }) => {
 
 	if (!apiKey || !from) {
 		console.error('RESEND_API_KEY atau RESEND_FROM_EMAIL belum dikonfigurasi.');
-		return redirect(request, 'error');
+		return redirect(request, 'error', 'config');
 	}
 
 	const formData = await request.formData();
@@ -33,7 +36,7 @@ export const POST: APIRoute = async ({ request }) => {
 		email.length > 254 ||
 		content.length > 5000
 	) {
-		return redirect(request, 'error');
+		return redirect(request, 'error', 'validation');
 	}
 
 	try {
@@ -53,12 +56,18 @@ export const POST: APIRoute = async ({ request }) => {
 		});
 
 		if (!response.ok) {
-			console.error('Resend gagal mengirim email:', await response.text());
-			return redirect(request, 'error');
+			const errorBody = await response.text();
+			console.error('Resend gagal mengirim email:', {
+				status: response.status,
+				from,
+				to: recipient,
+				body: errorBody,
+			});
+			return redirect(request, 'error', 'resend');
 		}
 	} catch (error) {
 		console.error('Koneksi ke Resend gagal:', error);
-		return redirect(request, 'error');
+		return redirect(request, 'error', 'network');
 	}
 
 	return redirect(request, 'sent');

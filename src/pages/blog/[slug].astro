@@ -1,30 +1,32 @@
 ---
 import { SEO } from 'astro-seo';
 import { Image } from 'astro:assets';
-import { getCollection, render } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 import Share from '../../components/Share.astro';
 import Layout from '../../layouts/ArtLayout.astro';
 import { getFormattedDate } from '../../utils/global';
 
-export const getStaticPaths = async () => {
-    const blogPosts = await getCollection('blog');
+const slug = Astro.params.slug;
+const post = slug ? await getEntry('blog', slug) : undefined;
 
-    return blogPosts.map((post) => ({
-        params: { slug: post.id },
-        props: { post },
-    }));
-};
+if (!post) {
+    Astro.response.status = 404;
+}
 
-const { post } = Astro.props;
-const { Content, remarkPluginFrontmatter } = await render(post);
+const rendered = post ? await render(post) : undefined;
+const Content = rendered?.Content;
+const remarkPluginFrontmatter = rendered?.remarkPluginFrontmatter;
 
 // Fallback nilai agar TypeScript tidak komplain 'undefined' / 'Date'
-const title = post.data.title ?? 'Blog Post';
-const excerpt = post.data.excerpt ?? '';
-const imageUrl = post.data.image ?? '';
-const publishedAtString = post.data.publishedAt 
-    ? new Date(post.data.publishedAt).toISOString() 
-    : (post.data.date ? new Date(post.data.date).toISOString() : '');
+const title = post?.data.title ?? 'Blog Post';
+const excerpt = post?.data.excerpt ?? '';
+const imageUrl = post?.data.image ?? '';
+const author = post?.data.author ?? 'Admin';
+const date = post?.data.date;
+const publishedAt = post?.data.publishedAt;
+const publishedAtString = publishedAt
+    ? new Date(publishedAt).toISOString()
+    : (date ? new Date(date).toISOString() : '');
 ---
 
 <Layout title={title}>
@@ -55,22 +57,22 @@ const publishedAtString = post.data.publishedAt
             <div class='meta'>
                 <div class='text-center'>
                     <p>
-                        {post.data.author ?? 'Admin'}
+                        {author}
                     </p>
                     <div>
                         <time datetime={publishedAtString}>
-                            {post.data.date ? getFormattedDate(post.data.date) : ''}
+                            {date ? getFormattedDate(date) : ''}
                         </time>
 
                         <span> &bull; </span>
-                        <p>{remarkPluginFrontmatter.minutesRead}</p>
+                        <p>{remarkPluginFrontmatter?.minutesRead ?? ''}</p>
                     </div>
                 </div>
             </div>
         </div>
          <Share />
         <div class='content'>
-            <Content />
+            {Content ? <Content /> : <p>Artikel tidak ditemukan.</p>}
         </div>
 
        
@@ -86,7 +88,7 @@ const publishedAtString = post.data.publishedAt
 
 <script
     is:inline
-    define:vars={{ PAGE_URL: Astro.url.href, PAGE_IDENTIFIER: post.id }}
+    define:vars={{ PAGE_URL: Astro.url.href, PAGE_IDENTIFIER: post?.id ?? slug }}
 >
     var disqus_config = function () {
         this.page.url = PAGE_URL;
