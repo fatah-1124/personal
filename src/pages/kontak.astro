@@ -80,16 +80,17 @@ const errorReason = Astro.url.searchParams.get('reason');
                         {sent && <div class="alert alert-success" role="status">Pesan berhasil dikirim.</div>}
                         {errorReason === 'config' && <div class="alert alert-danger" role="alert">Konfigurasi email server belum lengkap.</div>}
                         {errorReason === 'validation' && <div class="alert alert-danger" role="alert">Periksa kembali nama, email, dan komentar Anda.</div>}
-                        {errorReason === 'resend' && <div class="alert alert-danger" role="alert">Layanan email menolak pesan. Silakan coba lagi nanti.</div>}
-                        {errorReason === 'network' && <div class="alert alert-danger" role="alert">Layanan email tidak dapat dihubungi. Silakan coba lagi nanti.</div>}
-                        <form action="/api/contact" method="POST">
+                        <form action="https://formsubmit.co/yasin.fatah56@gmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="Saran dan kritik dari website" />
+                            <input type="hidden" name="_template" value="table" />
+                            <input type="hidden" name="_next" value="https://www.deepwater.my.id/kontak?sent=1" />
                             <div class="mb-3">
                                 <label for="author" class="form-label">Nama</label>
                                 <input type="text" class="form-control" id="author" name="author" required>
                             </div>
 							<div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <input type="email" class="form-control" id="email" name="_replyto" required>
                             </div>
                             <div class="mb-3">
                                 <label for="content" class="form-label">Komentar/saran/kritik</label>
