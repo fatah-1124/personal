@@ -1,0 +1,132 @@
+---
+export interface Props {
+  imageSrc?: string;
+  imageAlt?: string;
+}
+const { imageSrc = "/dashboard2.jpg", imageAlt = "analisis keuangan" } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <div id="google_translate_element"></div>
+			  <h1 class="hero-title">Sistem Informasi Manajemen untuk Sektor Maritim, Logistik & UMKM</h1>
+        <p class="hero-subtitle">
+          Dibangun oleh Software Engineer yang juga aktif berlayar sebagai pelaut, memahami kebutuhan operasional di lapangan.
+        </p>
+        <div class="hero-cta">
+          <a href="https://wa.me/6285648013129" class="btn-brass" target="_blank" rel="noopener">
+            WhatsApp
+          </a>
+          <a href="#karya" class="btn-outline-hero">Portofolio</a>
+          <a href="https://www.github.com/fatah-1124" class="btn-outline-hero">Akun GitHub</a>
+        </div>
+        <p class="hero-trust">12+ tahun pengalaman pelayaran internasional &middot; proyek untuk sektor maritim &amp; logistik</p>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="hero-frame">
+          <img src={imageSrc} alt={imageAlt} class="hero-image" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: #0E2233;
+    color: #F5F3EE;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(245, 243, 238, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245, 243, 238, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+  .hero .container {
+    position: relative;
+    z-index: 1;
+  }
+  .hero-title {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.25rem;
+    max-width: 20ch;
+  }
+  .hero-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 1.05rem;
+    color: #B9C4C8;
+    max-width: 42ch;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+  }
+  .btn-brass,
+  .btn-outline-hero {
+    font-family: "Inter", sans-serif;
+    display: inline-block;
+    padding: 0.65rem 1.4rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.15s ease;
+  }
+  .btn-brass {
+    background-color: #C08A3E;
+    border: 1px solid #C08A3E;
+    color: #0E2233;
+    font-weight: 600;
+  }
+  .btn-brass:hover {
+    background-color: #D9A257;
+    color: #0E2233;
+  }
+  .btn-outline-hero {
+    background: transparent;
+    border: 1px solid rgba(245, 243, 238, 0.35);
+    color: #F5F3EE;
+    font-weight: 500;
+  }
+  .btn-outline-hero:hover {
+    border-color: #F5F3EE;
+  }
+  .hero-trust {
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    color: #7C8B94;
+    margin: 0;
+  }
+  .hero-frame {
+    border: 1px solid rgba(192, 138, 62, 0.4);
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+  }
+  @media (max-width: 991px) {
+    .hero {
+      padding: 3.5rem 0;
+    }
+  }
+</style>

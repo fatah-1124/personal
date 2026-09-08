@@ -30,4 +30,4 @@ Selain pendidikan formal, saya juga aktif memperkuat kompetensi melalui sertifik
 
 ## Ke Depan
 
-Menggabungkan pengalaman bertahun-tahun di laut dengan kemampuan teknis di bidang data, saya sedang membangun jalur karier sebagai **Software Developer** — menjembatani dunia pelayaran dengan pengambilan keputusan berbasis data, serta pengembangan aplikasi berbasis data bagi industri maritim dan logistik.
+Menggabungkan pengalaman bertahun-tahun di laut dengan kemampuan teknis di bidang data, saya sedang membangun jalur karier sebagai **Software Engineer | Data Consultant** — menjembatani dunia pelayaran dengan pengambilan keputusan berbasis data, serta pengembangan aplikasi berbasis data bagi industri maritim dan logistik.

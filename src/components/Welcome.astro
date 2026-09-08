@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import '../components/Card.astro';
 // 1. Ambil semua data koleksi 'blog'
 const blogPosts = await getCollection('blog');
+import Hero from '../components/Hero.astro';
 
 ---
 <HeaderAstroComponent>
@@ -11,26 +12,26 @@ const blogPosts = await getCollection('blog');
 
 	<body>
 		<div class="container">
-				<div class="p-4 mb-2 bg-white border 10 border-primary rounded">
-					<div id="google_translate_element"></div>
-					<h1>
-						Solusi Sistem Informasi untuk Sektor Maritim & Logistik
-					</h1>
-					<img src="/ship1.jpg" alt="" class="float-start me-3 mb-3" style="max-width:400px;">
-					Mengawali karir sebagai IT Support (1998), berganti karir sebagai Graphic Designer dan Database Administrator (2001 - 2011), sempat menjadi pelaut sejak 2012 - sekarang. Saat ini, saya berusaha menggabungkan semua keterampilan dan pengalaman, dengan melayani sektor Maritim dan Logistik sebagai Full-Stack Engineer | Data Consultant. Untuk informasi lebih detil, silahkan kunjungi halaman <a  href="profil">Profil.</a> Untuk melihat struktur kode yang saya tulis, silahkan cek <a href="https://github.com/fatah-1124" target="_blank" rel="noopener noreferrer">Akun GitHub Saya</a>. Bagi siapapun yang membutuhkan solusi dalam hal ini, silahkan hubungi saya melalui <a href="http://wa.me/6285648013129">Whatsapp.</a>
-					<br><br>						
-				</div>
+			
+			<div class="p-4 mb-2 bg-body border 10 border-primary rounded">
+				
+				<Hero>
+				</Hero>
+			</div>	
 				<br>
-				<div class="p-4 mb-2 bg-white border text-center border-primary rounded">
+				<section id="karya">
+					<div class="p-4 mb-2 bg-white border text-center border-primary rounded">
 					<h2>Contoh Hasil Karya</h2>
 					<br>
 					<div class="container d-flex flex-column flex-sm-row gap-3">
-						<a class="btn btn-modify" href="contohDashboard" role="button">Visualisasi Data (Looker Studio) </a>
+						<a class="btn btn-modify" href="looker" role="button">Dashboard Analisis Konsumsi Bahan Bakar</a>
 						<a class="btn btn-modify" href="https://softdemo-production.up.railway.app" role="button">Sistem Manajemen Stok</a>
 						<a class="btn btn-modify" href="/cvFatah" role="button">CV Online Khusus Pelaut</a>
-						<a class="btn btn-modify" href="#" role="button">Visualisasi Data (Power BI) - in progress</a>
+						<a class="btn btn-modify" href="powerBI" role="button">Dashboard Analisis Keuangan</a>
 					</div>
-				</div>
+					</div>
+				</section>
+				
 				<br>
 				<div class="p-4 mb-2 bg-white border 10 border-primary rounded">
 					<h2>Daftar Artikel</h2>
@@ -50,7 +51,7 @@ const blogPosts = await getCollection('blog');
 						</div>
 					</main>
 				</div> 
-			</div>
+		</div>
 	</body>
 		
 	
