@@ -11,27 +11,26 @@ import Hero from '../components/Hero.astro';
 </HeaderAstroComponent>
 
 	<body>
-		<div class="container">
-				<Hero>
-				</Hero>
+		<Hero />
+		<section id="karya" class="karya-container">
+			<div class="p-4 mb-2 bg-white border text-center rounded">
+			<h2>Contoh Hasil Karya</h2>
+			<br>
+			<div class="d-flex flex-column flex-sm-row gap-3">
+				<a class="btn btn-primary" href="looker" role="button">Dashboard Analisis Konsumsi Bahan Bakar</a>
+				<a class="btn btn-primary" href="https://softdemo-production.up.railway.app" role="button">Sistem Manajemen Stok</a>
+				<a class="btn btn-primary" href="/cvFatah" role="button">CV Online Khusus Pelaut</a>
+				<a class="btn btn-primary" href="powerBI" role="button">Dashboard Analisis Keuangan</a>
+				<a class="btn btn-primary" href="#" role="button">IndoSeaman - MaritimeApp</a>
+			</div>
+			</div>
+		</section>
+		
+		<section id="artikel" class="artikel-container">
 				<br>
-				<section id="karya">
-					<div class="p-4 mb-2 bg-white border text-center border-primary rounded">
-					<h2>Contoh Hasil Karya</h2>
-					<br>
-					<div class="container d-flex flex-column flex-sm-row gap-3">
-						<a class="btn btn-modify" href="looker" role="button">Dashboard Analisis Konsumsi Bahan Bakar</a>
-						<a class="btn btn-modify" href="https://softdemo-production.up.railway.app" role="button">Sistem Manajemen Stok</a>
-						<a class="btn btn-modify" href="/cvFatah" role="button">CV Online Khusus Pelaut</a>
-						<a class="btn btn-modify" href="powerBI" role="button">Dashboard Analisis Keuangan</a>
-					</div>
-					</div>
-				</section>
-				
-				<br>
-				<div class="p-4 mb-2 bg-white border 10 border-primary rounded">
+				<div class="p-4 mb-2 bg-white rounded">
 					<h2>Daftar Artikel</h2>
-					<main class='container'>
+					<main>
 						<div>
 							<ul>
 								{
@@ -47,7 +46,19 @@ import Hero from '../components/Hero.astro';
 						</div>
 					</main>
 				</div> 
-		</div>
+		</section>
 	</body>
+
+<style>
+	.karya-container {
+		width: min(100% - 2rem, 1300px);
+		margin: 2rem auto;
+	}
+
+	.artikel-container {
+		width: min(100% - 2rem, 1300px);
+		margin: 2rem auto;
+	}
+</style>
 		
 	

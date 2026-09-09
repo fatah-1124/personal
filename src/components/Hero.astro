@@ -2,33 +2,44 @@
 export interface Props {
   imageSrc?: string;
   imageAlt?: string;
+  imageSrc1?: string;
+  imageAlt1?: string;
 }
-const { imageSrc = "/dashboard2.jpg", imageAlt = "analisis keuangan" } = Astro.props;
+const {
+  imageSrc = "/dashboard2.jpg",
+  imageAlt = "analisis keuangan",
+  imageSrc1 = "/dashboard1.jpg",
+  imageAlt1 = "analisis bahan bakar",
+} = Astro.props;
 ---
 
 <section class="hero">
   <div class="container">
     <div class="row align-items-center gy-5">
       <div class="col-lg-6">
-        <div id="google_translate_element"></div> <br>
+        
 			  <h1 class="hero-title">Sistem Informasi Manajemen untuk Sektor Maritim, Logistik & UMKM</h1>
         <p class="hero-subtitle">
           Layanan mencakup Database Management, Web Development, Data Analytics, hingga Business Intelligence Development. Dibangun oleh Software Engineer yang juga aktif berlayar sebagai pelaut.
         </p>
         <div class="hero-cta">
-          <a href="https://wa.me/6285648013129" class="btn-brass" target="_blank" rel="noopener">
+          <a href="https://wa.me/6285648013129" class="btn-outline-hero" target="_blank" rel="noopener">
             WhatsApp
           </a>
           <a href="profil" class="btn-outline-hero">Profil</a>
           <a href="#karya" class="btn-outline-hero">Portofolio</a>
           <a href="https://www.github.com/fatah-1124" class="btn-outline-hero">GitHub</a>
         </div>
-        <p class="hero-trust">12+ tahun pengalaman pelayaran internasional &middot; proyek untuk sektor maritim &amp; logistik</p>
+        <p class="hero-trust">12+ tahun pengalaman pelayaran internasional &middot; proyek untuk sektor maritim &amp; logistik</p>  <br>
+        <div id="google_translate_element"></div>
       </div>
 
       <div class="col-lg-6">
         <div class="hero-frame">
           <img src={imageSrc} alt={imageAlt} class="hero-image" />
+        </div>
+        <div class="hero-frame">
+          <img src={imageSrc1} alt={imageAlt1} class="hero-image" />
         </div>
       </div>
     </div>
