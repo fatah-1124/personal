@@ -5,7 +5,7 @@ interface Props {
 }
 
 const {
-    title = 'R.M. Fatah Yasin - Software Engineer',
+    title = 'Software Engineer for Maritime and Logistics Sector',
     description = 'Solusi sistem informasi untuk sektor maritim dan logistik, oleh R. M. Fatah Yasin.',
 } = Astro.props;
 import '../assets/css/app.css';
@@ -41,14 +41,16 @@ import HeaderAstroComponent from '../components/Header.astro';
     <body>
 		<HeaderAstroComponent />
 		<slot />
+		
         <footer class="bg-secondary text-white text-center p-1 mt-5">
             <p>
-                Copyright &copy; 2026 || R. M. Fatah Yasin || based on JavaScript
+                Copyright &copy; 2026 - R. M. Fatah Yasin
             </p>
         </footer>
     </body>
 </html>
 <style>
+
 	.page-layout {
 		display: flex;
 		width: 100%;
