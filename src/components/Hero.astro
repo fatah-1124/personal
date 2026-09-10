@@ -46,6 +46,17 @@ const {
     const langOptions = document.querySelectorAll('.lang-option');
     const langCurrent = document.querySelector('.lang-current');
 
+    function getGoogleLanguage() {
+      const cookies = document.cookie.split(';').map((cookie) => cookie.trim());
+      const googleCookie = cookies.find((cookie) => cookie.startsWith('googtrans='));
+
+      if (!googleCookie) return 'id';
+
+      const value = decodeURIComponent(googleCookie.split('=').slice(1).join('='));
+      const match = value.match(/\/id\/(en|ko|ja|id)$/) || value.match(/\/(en|ko|ja|id)$/);
+      return match ? match[1] : 'id';
+    }
+
     function setGoogleLanguage(lang) {
       const cookieValue = 'googtrans=/id/' + lang;
       document.cookie = cookieValue + '; path=/;';
@@ -64,6 +75,12 @@ const {
       langCurrent.alt = selectedLabel;
     }
 
+    function applyCurrentGoogleLanguage() {
+      const activeLang = getGoogleLanguage();
+      const matchedOption = Array.from(langOptions).find((option) => option.dataset.lang === activeLang) || langOptions[0];
+      updateActiveLang(matchedOption);
+    }
+
     if (langToggle && langMenu) {
       langToggle.addEventListener('click', () => {
         const isOpen = langMenu.classList.toggle('is-open');
@@ -78,10 +95,7 @@ const {
       });
     }
 
-    const currentLangOption = document.querySelector('.lang-option.is-active') || langOptions[0];
-    if (currentLangOption) {
-      updateActiveLang(currentLangOption);
-    }
+    applyCurrentGoogleLanguage();
 
     langOptions.forEach((option) => {
       option.addEventListener('click', () => {
