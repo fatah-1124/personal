@@ -14,11 +14,92 @@ const {
 ---
 
 <section class="hero">
+  <div class="hero-lang">
+    <button type="button" class="lang-toggle" aria-expanded="false" aria-label="Pilih bahasa">
+      <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" class="lang-current" />
+      <span class="lang-caret">▾</span>
+    </button>
+
+    <div class="lang-menu" id="lang-menu" role="menu" aria-label="Pilihan bahasa">
+      <button type="button" class="lang-option is-active" data-lang="id" data-label="Indonesia" aria-label="Bahasa Indonesia">
+        <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" />
+        <span>ID</span>
+      </button>
+      <button type="button" class="lang-option" data-lang="en" data-label="English" aria-label="English">
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" />
+        <span>EN</span>
+      </button>
+      <button type="button" class="lang-option" data-lang="ko" data-label="한국어" aria-label="한국어">
+        <img src="https://flagcdn.com/w40/kr.png" alt="한국어" />
+        <span>KO</span>
+      </button>
+      <button type="button" class="lang-option" data-lang="ja" data-label="日本語" aria-label="日本語">
+        <img src="https://flagcdn.com/w40/jp.png" alt="日本語" />
+        <span>JA</span>
+      </button>
+    </div>
+  </div>
+
+  <script is:inline>
+    const langToggle = document.querySelector('.lang-toggle');
+    const langMenu = document.querySelector('.lang-menu');
+    const langOptions = document.querySelectorAll('.lang-option');
+    const langCurrent = document.querySelector('.lang-current');
+
+    function setGoogleLanguage(lang) {
+      const cookieValue = 'googtrans=/id/' + lang;
+      document.cookie = cookieValue + '; path=/;';
+      document.cookie = cookieValue + '; path=/; domain=' + window.location.hostname + ';';
+      window.location.reload();
+    }
+
+    function updateActiveLang(selectedOption) {
+      langOptions.forEach((option) => {
+        option.classList.toggle('is-active', option === selectedOption);
+      });
+
+      const selectedFlag = selectedOption.querySelector('img')?.src || 'https://flagcdn.com/w40/id.png';
+      const selectedLabel = selectedOption.dataset.label || 'Indonesia';
+      langCurrent.src = selectedFlag;
+      langCurrent.alt = selectedLabel;
+    }
+
+    if (langToggle && langMenu) {
+      langToggle.addEventListener('click', () => {
+        const isOpen = langMenu.classList.toggle('is-open');
+        langToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!langToggle.contains(event.target) && !langMenu.contains(event.target)) {
+          langMenu.classList.remove('is-open');
+          langToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    const currentLangOption = document.querySelector('.lang-option.is-active') || langOptions[0];
+    if (currentLangOption) {
+      updateActiveLang(currentLangOption);
+    }
+
+    langOptions.forEach((option) => {
+      option.addEventListener('click', () => {
+        const lang = option.dataset.lang;
+
+        updateActiveLang(option);
+        langMenu.classList.remove('is-open');
+        langToggle.setAttribute('aria-expanded', 'false');
+
+        setGoogleLanguage(lang);
+      });
+    });
+  </script>
+
   <div class="container">
     <div class="row align-items-center gy-5">
       <div class="col-lg-6">
-        
-			  <h1 class="hero-title">Sistem Informasi Manajemen untuk Sektor Maritim, Logistik & UMKM</h1>
+        <h1 class="hero-title">Sistem Informasi Manajemen untuk Sektor Maritim, Logistik & UMKM</h1>
         <p class="hero-subtitle">
           Layanan mencakup Database Management, Web Development, Data Analytics, hingga Business Intelligence Development. Dibangun oleh Software Engineer yang juga aktif berlayar sebagai pelaut.
         </p>
@@ -30,8 +111,7 @@ const {
           <a href="#karya" class="btn-outline-hero">Portofolio</a>
           <a href="https://www.github.com/fatah-1124" class="btn-outline-hero">GitHub</a>
         </div>
-        <p class="hero-trust">12+ tahun pengalaman pelayaran internasional &middot; proyek untuk sektor maritim &amp; logistik</p>  <br>
-        <div id="google_translate_element"></div>
+        <p class="hero-trust">12+ tahun pengalaman pelayaran internasional &middot; proyek untuk sektor maritim &amp; logistik</p>
       </div>
 
       <div class="col-lg-6">
@@ -67,6 +147,93 @@ const {
   .hero .container {
     position: relative;
     z-index: 1;
+  }
+  .hero-lang {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+  .lang-toggle {
+    appearance: none;
+    border: 1px solid rgba(245, 243, 238, 0.25);
+    background: rgba(245, 243, 238, 0.06);
+    border-radius: 999px;
+    color: #F5F3EE;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.7rem 0.45rem 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .lang-toggle:hover,
+  .lang-toggle:focus-visible {
+    border-color: rgba(245, 243, 238, 0.6);
+    transform: translateY(-1px);
+    outline: none;
+  }
+  .lang-current {
+    width: 1.55rem;
+    height: 1.55rem;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 1px solid rgba(245, 243, 238, 0.25);
+  }
+  .lang-caret {
+    font-size: 0.9rem;
+    color: #F5F3EE;
+    line-height: 1;
+  }
+  .lang-menu {
+    display: none;
+    min-width: 170px;
+    background: rgba(12, 24, 34, 0.96);
+    border: 1px solid rgba(245, 243, 238, 0.18);
+    border-radius: 12px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+  }
+  .lang-menu.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+  .lang-option {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: #F5F3EE;
+    text-align: left;
+    padding: 0.7rem 0.8rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .lang-option:hover,
+  .lang-option:focus-visible {
+    background: rgba(245, 243, 238, 0.06);
+    outline: none;
+  }
+  .lang-option.is-active {
+    background: rgba(192, 138, 62, 0.14);
+  }
+  .lang-option img {
+    width: 1.4rem;
+    height: 1.4rem;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+  .lang-option span {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
   }
   .hero-title {
     font-family: "Fraunces", Georgia, serif;

@@ -26,11 +26,7 @@ import HeaderAstroComponent from '../components/Header.astro';
 		<script is:inline type="text/javascript">
 		function googleTranslateElementInit() {
 			new google.translate.TranslateElement(
-			{
-				pageLanguage: 'id',
-				includedLanguages: 'en,id,ja,ko,fr,es,de',
-				layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-			},
+			{ pageLanguage: 'id', includedLanguages: 'id,en,ko,ja', autoDisplay: false },
 			'google_translate_element'
 			);
 		}
