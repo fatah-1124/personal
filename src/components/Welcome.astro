@@ -1,9 +1,9 @@
 ---
 import HeaderAstroComponent from '../components/Header.astro';
-import { getCollection } from 'astro:content';
+// import { getCollection } from 'astro:content';
 import '../components/Card.astro';
 // 1. Ambil semua data koleksi 'blog'
-const blogPosts = await getCollection('blog');
+// const blogPosts = await getCollection('blog');
 import Hero from '../components/Hero.astro';
 
 ---
@@ -16,16 +16,16 @@ import Hero from '../components/Hero.astro';
 			<div class="p-4 mb-2 bg-white border text-center rounded">
 			<h2>Contoh Hasil Karya</h2>
 			<br>
-			<div class="d-flex flex-column flex-sm-row gap-3">
-				<a class="btn btn-primary" href="/looker" role="button">Dashboard Konsumsi Bahan Bakar Kapal</a>
-				<a class="btn btn-primary" href="/cvFatah" role="button">CV Online Khusus Pelaut</a>
-				<a class="btn btn-primary" href="/powerBI" role="button">Dashboard Analisis Keuangan</a>
-				<a class="btn btn-primary" href="https://indoseaman.my.id" role="button">IndoSeaman - MaritimeApp</a>
+			<div class="d-flex flex-column flex-sm-row gap-4">
+				<a class="btn btn-warning" href="https://indoseaman.my.id" role="button">IndoSeaman - MaritimeApp</a>
+				<a class="btn btn-warning" href="/looker" role="button">Dashboard Konsumsi Bahan Bakar Kapal</a>
+				<a class="btn btn-warning" href="/cvFatah" role="button">CV Online Khusus Pelaut</a>
+				<a class="btn btn-warning" href="/powerBI" role="button">Dashboard Analisis Keuangan</a>
 			</div>
 			</div>
 		</section>
 		
-		<section id="artikel" class="artikel-container">
+		<!-- <section id="artikel" class="artikel-container">
 				<br>
 				<div class="p-4 mb-2 bg-white rounded">
 					<h2>Daftar Artikel</h2>
@@ -45,7 +45,7 @@ import Hero from '../components/Hero.astro';
 						</div>
 					</main>
 				</div> 
-		</section>
+		</section> -->
 	</body>
 
 <style>

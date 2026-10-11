@@ -6,8 +6,8 @@ export interface Props {
   imageAlt1?: string;
 }
 const {
-  imageSrc = "/dashboard2.jpg",
-  imageAlt = "analisis keuangan",
+  imageSrc = "/dev_2.jpg",
+  imageAlt = "maritimeApp",
   imageSrc1 = "/dashboard1.jpg",
   imageAlt1 = "analisis bahan bakar",
 } = Astro.props;
@@ -118,11 +118,11 @@ const {
           Layanan mencakup Database Management, Web Development, Data Analytics, hingga Business Intelligence Development. Dibangun oleh Software Engineer yang juga aktif berlayar sebagai pelaut.
         </p>
         <div class="hero-cta">
+          <a href="#karya" class="btn-brass">Portofolio</a>
+          <a href="profil" class="btn-outline-hero">Profil</a>
           <a href="https://wa.me/6285648013129" class="btn-outline-hero" target="_blank" rel="noopener">
             WhatsApp
           </a>
-          <a href="profil" class="btn-outline-hero">Profil</a>
-          <a href="#karya" class="btn-outline-hero">Portofolio</a>
           <a href="https://www.github.com/fatah-1124" class="btn-outline-hero">GitHub</a>
         </div>
         <p class="hero-trust">12+ tahun pengalaman pelayaran internasional &middot; proyek untuk sektor maritim &amp; logistik</p>
@@ -132,6 +132,7 @@ const {
         <div class="hero-frame">
           <img src={imageSrc} alt={imageAlt} class="hero-image" />
         </div>
+        <br>
         <div class="hero-frame">
           <img src={imageSrc1} alt={imageAlt1} class="hero-image" />
         </div>
@@ -164,7 +165,7 @@ const {
   }
   .hero-lang {
     position: absolute;
-    top: 1rem;
+    top: 3rem;
     right: 1rem;
     z-index: 2;
     display: flex;
@@ -282,7 +283,7 @@ const {
     transition: 0.15s ease;
   }
   .btn-brass {
-    background-color: #C08A3E;
+    background-color: #fccf3d;
     border: 1px solid #C08A3E;
     color: #0E2233;
     font-weight: 600;
@@ -302,8 +303,8 @@ const {
   }
   .hero-trust {
     font-family: "Inter", sans-serif;
-    font-size: 0.85rem;
-    color: #7C8B94;
+    font-size: 1.5rem;
+    color: #f1f3f5;
     margin: 0;
   }
   .hero-frame {
