@@ -5,22 +5,48 @@ import '../components/Card.astro';
 // 1. Ambil semua data koleksi 'blog'
 // const blogPosts = await getCollection('blog');
 import Hero from '../components/Hero.astro';
-
+export interface Props {
+  imageSrc?: string;
+  imageAlt?: string;
+  imageSrc1?: string;
+  imageAlt1?: string;
+  imageSrc2?: string;
+  imageAlt2?: string;
+}
+const {
+  imageSrc = "/dev_1.jpg",
+  imageAlt = "database",
+  imageSrc1 = "/vis_2.jpg",
+  imageAlt1 = "analisis bahan bakar",
+  imageSrc2 = "/vis_1.jpg",
+  imageAlt2 = "analisis keuangan",
+} = Astro.props;
 ---
 <HeaderAstroComponent>
 </HeaderAstroComponent>
 
 	<body>
 		<Hero />
-		<section id="karya" class="karya-container">
-			<div class="p-4 mb-2 bg-white border text-center rounded">
+		<section id="karya" class="karya-container rounded">
+			<div class="p-4 mb-2 text-center text-white">
 			<h2>Contoh Hasil Karya</h2>
 			<br>
 			<div class="d-flex flex-column flex-sm-row gap-4">
-				<a class="btn btn-warning" href="https://indoseaman.my.id" role="button">IndoSeaman - MaritimeApp</a>
-				<a class="btn btn-warning" href="/looker" role="button">Dashboard Konsumsi Bahan Bakar Kapal</a>
-				<a class="btn btn-warning" href="/cvFatah" role="button">CV Online Khusus Pelaut</a>
-				<a class="btn btn-warning" href="/powerBI" role="button">Dashboard Analisis Keuangan</a>
+			<!-- <div class="col-lg-6"> -->
+				<div class="hero-frame">
+					<img src={imageSrc} alt={imageAlt} class="hero-image"/> <br>
+					<a class="btn btn-warning" href="https://indoseaman.my.id" role="button">IndoSeaman - MaritimeApp</a>
+				</div>
+				<div class="hero-frame">
+					<img src={imageSrc1} alt={imageAlt1} class="hero-image"/> <br>
+					<a class="btn btn-warning" href="/looker" role="button">Dashboard Konsumsi Bahan Bakar Kapal</a>
+				</div>	
+				<div class="hero-frame">
+					<img src={imageSrc2} alt={imageAlt2} class="hero-image"/> <br>
+					<a class="btn btn-warning" href="/powerBI" role="button">Dashboard Analisis Keuangan</a>
+				</div>
+				<!-- <a class="btn btn-warning" href="/cvFatah" role="button">CV Online Khusus Pelaut</a> -->
+				
 			</div>
 			</div>
 		</section>
@@ -50,14 +76,28 @@ import Hero from '../components/Hero.astro';
 
 <style>
 	.karya-container {
-		width: min(100% - 2rem, 1300px);
+		background-color: rgb(8, 8, 105);
+		width: min(100% - 2rem, 1100px);
 		margin: 2rem auto;
+		position: relative;
+		overflow: hidden;
 	}
 
 	.artikel-container {
 		width: min(100% - 2rem, 1300px);
 		margin: 2rem auto;
 	}
+	.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+	}
+	.hero-frame {
+    border: 1px solid rgba(192, 138, 62, 0.4);
+    padding: 0.3rem;
+    border-radius: 6px;
+  }
 </style>
 		
 	
