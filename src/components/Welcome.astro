@@ -29,49 +29,25 @@ const {
 		<Hero />
 		<section id="karya" class="karya-container rounded">
 			<div class="p-4 mb-2 text-center text-white">
-			<h2>Contoh Hasil Karya</h2>
-			<br>
-			<div class="d-flex flex-column flex-sm-row gap-4">
-			<!-- <div class="col-lg-6"> -->
-				<div class="hero-frame">
-					<img src={imageSrc} alt={imageAlt} class="hero-image"/> <br>
-					<a class="btn btn-warning" href="https://indoseaman.my.id" role="button">IndoSeaman - MaritimeApp</a>
-				</div>
-				<div class="hero-frame">
-					<img src={imageSrc1} alt={imageAlt1} class="hero-image"/> <br>
-					<a class="btn btn-warning" href="/looker" role="button">Dashboard Konsumsi Bahan Bakar Kapal</a>
-				</div>	
-				<div class="hero-frame">
-					<img src={imageSrc2} alt={imageAlt2} class="hero-image"/> <br>
-					<a class="btn btn-warning" href="/powerBI" role="button">Dashboard Analisis Keuangan</a>
-				</div>
-				<!-- <a class="btn btn-warning" href="/cvFatah" role="button">CV Online Khusus Pelaut</a> -->
+				<h2>Contoh Hasil Karya</h2>
+				<br>
+				<div class="d-flex flex-column flex-sm-row gap-4">
 				
-			</div>
+					<div class="hero-frame">
+						<img src={imageSrc} alt={imageAlt} class="hero-image"/> <br>
+						<a class="btn btn-warning" href="https://indoseaman.my.id" role="button">IndoSeaman - MaritimeApp</a>
+					</div>
+					<div class="hero-frame">
+						<img src={imageSrc1} alt={imageAlt1} class="hero-image"/> <br>
+						<a class="btn btn-warning" href="/looker" role="button">Dashboard Konsumsi Bahan Bakar Kapal</a>
+					</div>	
+					<div class="hero-frame">
+						<img src={imageSrc2} alt={imageAlt2} class="hero-image"/> <br>
+						<a class="btn btn-warning" href="/powerBI" role="button">Dashboard Analisis Keuangan</a>
+					</div>
+				</div>
 			</div>
 		</section>
-		
-		<!-- <section id="artikel" class="artikel-container">
-				<br>
-				<div class="p-4 mb-2 bg-white rounded">
-					<h2>Daftar Artikel</h2>
-					<main>
-						<div>
-							<ul>
-								{
-									blogPosts.map((post) => (
-									<li>
-									<a href={`/blog/${post.id}`}>
-										{post.data.title ?? 'Tanpa Judul'}
-									</a>
-									</li>
-								))
-								}
-							</ul>
-						</div>
-					</main>
-				</div> 
-		</section> -->
 	</body>
 
 <style>
