@@ -4,8 +4,33 @@ import '../assets/css/style.css';
 <nav class="navbar navbar-expand-lg fixed-top bg-dark" data-bs-theme="light">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="/beranda">
-            <h5>Maritime Systems & Data Consultant</h5>
+            <h6>Maritime Tech Consultant</h6>
+            <h6>Database, Web & BI Developer</h6>
         </a>
+        <div class="header-lang">
+            <button type="button" class="lang-toggle" aria-expanded="false" aria-label="Pilih bahasa">
+                <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" class="lang-current" />
+                <span class="lang-caret">▾</span>
+            </button>
+            <div class="lang-menu" id="lang-menu" role="menu" aria-label="Pilihan bahasa">
+                <button type="button" class="lang-option is-active" data-lang="id" data-label="Indonesia" aria-label="Bahasa Indonesia">
+                    <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" />
+                    <span>ID</span>
+                </button>
+                <button type="button" class="lang-option" data-lang="en" data-label="English" aria-label="English">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="English" />
+                    <span>EN</span>
+                </button>
+                <button type="button" class="lang-option" data-lang="ko" data-label="한국어" aria-label="한국어">
+                    <img src="https://flagcdn.com/w40/kr.png" alt="한국어" />
+                    <span>KO</span>
+                </button>
+                <button type="button" class="lang-option" data-lang="ja" data-label="日本語" aria-label="日本語">
+                    <img src="https://flagcdn.com/w40/jp.png" alt="日本語" />
+                    <span>JA</span>
+                </button>
+            </div>
+        </div>
         <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse" data-bs-target="#navbarMenu"
             aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,30 +38,6 @@ import '../assets/css/style.css';
         </button>
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto gap-3">
-                <li class="nav-item header-lang">
-                    <button type="button" class="lang-toggle" aria-expanded="false" aria-label="Pilih bahasa">
-                        <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" class="lang-current" />
-                        <span class="lang-caret">▾</span>
-                    </button>
-                    <div class="lang-menu" id="lang-menu" role="menu" aria-label="Pilihan bahasa">
-                        <button type="button" class="lang-option is-active" data-lang="id" data-label="Indonesia" aria-label="Bahasa Indonesia">
-                            <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" />
-                            <span>ID</span>
-                        </button>
-                        <button type="button" class="lang-option" data-lang="en" data-label="English" aria-label="English">
-                            <img src="https://flagcdn.com/w40/gb.png" alt="English" />
-                            <span>EN</span>
-                        </button>
-                        <button type="button" class="lang-option" data-lang="ko" data-label="한국어" aria-label="한국어">
-                            <img src="https://flagcdn.com/w40/kr.png" alt="한국어" />
-                            <span>KO</span>
-                        </button>
-                        <button type="button" class="lang-option" data-lang="ja" data-label="日本語" aria-label="日本語">
-                            <img src="https://flagcdn.com/w40/jp.png" alt="日本語" />
-                            <span>JA</span>
-                        </button>
-                    </div>
-                </li>
                 <li class="nav-item"><a class="btn btn-light" href="/beranda">Beranda</a></li>
                 <li class="nav-item"><a class="btn btn-light" href="/kontak">Kontak</a></li>
             </ul>
@@ -116,6 +117,8 @@ import '../assets/css/style.css';
         position: relative;
         display: flex;
         align-items: center;
+        flex: 0 0 auto;
+        margin-right: 0.75rem;
     }
 
     .lang-toggle {
@@ -212,7 +215,7 @@ import '../assets/css/style.css';
 
     @media (max-width: 991px) {
         .header-lang {
-            padding: 0.5rem 0;
+            margin-right: 0.5rem;
         }
 
         .lang-menu {
