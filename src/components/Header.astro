@@ -4,8 +4,7 @@ import '../assets/css/style.css';
 <nav class="navbar navbar-expand-lg fixed-top bg-dark" data-bs-theme="light">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="/beranda">
-            <h4>Software Developer</h4>
-            <h4>Data Consultant</h4>
+            <h5>Maritime Systems & Data Consultant</h5>
         </a>
         <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse" data-bs-target="#navbarMenu"
@@ -14,10 +13,213 @@ import '../assets/css/style.css';
         </button>
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto gap-3">
+                <li class="nav-item header-lang">
+                    <button type="button" class="lang-toggle" aria-expanded="false" aria-label="Pilih bahasa">
+                        <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" class="lang-current" />
+                        <span class="lang-caret">▾</span>
+                    </button>
+                    <div class="lang-menu" id="lang-menu" role="menu" aria-label="Pilihan bahasa">
+                        <button type="button" class="lang-option is-active" data-lang="id" data-label="Indonesia" aria-label="Bahasa Indonesia">
+                            <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" />
+                            <span>ID</span>
+                        </button>
+                        <button type="button" class="lang-option" data-lang="en" data-label="English" aria-label="English">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English" />
+                            <span>EN</span>
+                        </button>
+                        <button type="button" class="lang-option" data-lang="ko" data-label="한국어" aria-label="한국어">
+                            <img src="https://flagcdn.com/w40/kr.png" alt="한국어" />
+                            <span>KO</span>
+                        </button>
+                        <button type="button" class="lang-option" data-lang="ja" data-label="日本語" aria-label="日本語">
+                            <img src="https://flagcdn.com/w40/jp.png" alt="日本語" />
+                            <span>JA</span>
+                        </button>
+                    </div>
+                </li>
                 <li class="nav-item"><a class="btn btn-light" href="/beranda">Beranda</a></li>
                 <li class="nav-item"><a class="btn btn-light" href="/kontak">Kontak</a></li>
             </ul>
         </div>
     </div>
 </nav>
+
+<script is:inline>
+    const langToggle = document.querySelector('.lang-toggle');
+    const langMenu = document.querySelector('.lang-menu');
+    const langOptions = document.querySelectorAll('.lang-option');
+    const langCurrent = document.querySelector('.lang-current');
+
+    function getGoogleLanguage() {
+        const cookies = document.cookie.split(';').map((cookie) => cookie.trim());
+        const googleCookie = cookies.find((cookie) => cookie.startsWith('googtrans='));
+        if (!googleCookie) return 'id';
+
+        const value = decodeURIComponent(googleCookie.split('=').slice(1).join('='));
+        const match = value.match(/\/id\/(en|ko|ja|id)$/) || value.match(/\/(en|ko|ja|id)$/);
+        return match ? match[1] : 'id';
+    }
+
+    function setGoogleLanguage(lang) {
+        const cookieValue = 'googtrans=/id/' + lang;
+        document.cookie = cookieValue + '; path=/;';
+        document.cookie = cookieValue + '; path=/; domain=' + window.location.hostname + ';';
+        window.location.reload();
+    }
+
+    function updateActiveLang(selectedOption) {
+        langOptions.forEach((option) => {
+            option.classList.toggle('is-active', option === selectedOption);
+        });
+
+        const selectedFlag = selectedOption.querySelector('img')?.src || 'https://flagcdn.com/w40/id.png';
+        const selectedLabel = selectedOption.dataset.label || 'Indonesia';
+        langCurrent.src = selectedFlag;
+        langCurrent.alt = selectedLabel;
+    }
+
+    function applyCurrentGoogleLanguage() {
+        const activeLang = getGoogleLanguage();
+        const matchedOption = Array.from(langOptions).find((option) => option.dataset.lang === activeLang) || langOptions[0];
+        updateActiveLang(matchedOption);
+    }
+
+    if (langToggle && langMenu) {
+        langToggle.addEventListener('click', () => {
+            const isOpen = langMenu.classList.toggle('is-open');
+            langToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!langToggle.contains(event.target) && !langMenu.contains(event.target)) {
+                langMenu.classList.remove('is-open');
+                langToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    applyCurrentGoogleLanguage();
+
+    langOptions.forEach((option) => {
+        option.addEventListener('click', () => {
+            const lang = option.dataset.lang;
+            updateActiveLang(option);
+            langMenu.classList.remove('is-open');
+            langToggle.setAttribute('aria-expanded', 'false');
+            setGoogleLanguage(lang);
+        });
+    });
+</script>
+
+<style>
+    .header-lang {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .lang-toggle {
+        appearance: none;
+        border: 1px solid rgba(245, 243, 238, 0.25);
+        background: rgba(245, 243, 238, 0.06);
+        border-radius: 999px;
+        color: #F5F3EE;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 0.7rem 0.45rem 0.5rem;
+        cursor: pointer;
+        transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .lang-toggle:hover,
+    .lang-toggle:focus-visible {
+        border-color: rgba(245, 243, 238, 0.6);
+        transform: translateY(-1px);
+        outline: none;
+    }
+
+    .lang-current {
+        width: 1.55rem;
+        height: 1.55rem;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        border: 1px solid rgba(245, 243, 238, 0.25);
+    }
+
+    .lang-caret {
+        font-size: 0.9rem;
+        color: #F5F3EE;
+        line-height: 1;
+    }
+
+    .lang-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        right: 0;
+        min-width: 170px;
+        background: rgba(12, 24, 34, 0.96);
+        border: 1px solid rgba(245, 243, 238, 0.18);
+        border-radius: 12px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+        overflow: hidden;
+        z-index: 1050;
+    }
+
+    .lang-menu.is-open {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lang-option {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        width: 100%;
+        border: 0;
+        background: transparent;
+        color: #F5F3EE;
+        text-align: left;
+        padding: 0.7rem 0.8rem;
+        cursor: pointer;
+        transition: background 0.15s ease;
+    }
+
+    .lang-option:hover,
+    .lang-option:focus-visible {
+        background: rgba(245, 243, 238, 0.06);
+        outline: none;
+    }
+
+    .lang-option.is-active {
+        background: rgba(192, 138, 62, 0.14);
+    }
+
+    .lang-option img {
+        width: 1.4rem;
+        height: 1.4rem;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+    }
+
+    .lang-option span {
+        font-size: 0.85rem;
+        letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 991px) {
+        .header-lang {
+            padding: 0.5rem 0;
+        }
+
+        .lang-menu {
+            top: 100%;
+            right: auto;
+            left: 0;
+        }
+    }
+</style>
 
