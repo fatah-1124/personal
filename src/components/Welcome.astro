@@ -14,8 +14,8 @@ const {
   imageAlt = "database",
   imageSrc1 = "/vis_2.jpg",
   imageAlt1 = "analisis bahan bakar",
-  imageSrc2 = "/vis_1.jpg",
-  imageAlt2 = "analisis keuangan",
+  imageSrc2 = "/pbi_2.jpg",
+  imageAlt2 = "PowerBI",
 } = Astro.props;
 ---
 	<body>
@@ -28,17 +28,21 @@ const {
 				
 					<div class="hero-frame">
 						<img src={imageSrc} alt={imageAlt} class="hero-image"/> <br>
-						<a class="btn btn-warning" href="https://indoseaman.my.id" role="button">IndoSeaman - MaritimeApp</a>
+						<a class="btn btn-warning" href="https://indoseaman.my.id" role="button">Aplikasi Web untuk Sektor Maritim</a>
 					</div>
 					<div class="hero-frame">
 						<img src={imageSrc1} alt={imageAlt1} class="hero-image"/> <br>
-						<a class="btn btn-warning" href="/looker" role="button">Dashboard Konsumsi Bahan Bakar Kapal</a>
+						<a class="btn btn-warning" href="/looker" role="button">Dashboard Manajemen Kru</a>
 					</div>	
 					<div class="hero-frame">
 						<img src={imageSrc2} alt={imageAlt2} class="hero-image"/> <br>
-						<a class="btn btn-warning" href="/powerBI" role="button">Dashboard Analisis Keuangan</a>
+						<a class="btn btn-warning" href="/powerBI" role="button">Dashboard Analisis Bahan Bakar</a>
 					</div>
 				</div>
+				<br>
+				<p>
+					Untuk referensi teknis, silahkan kunjungi  <a class="btn btn-warning" href="https://github.com/fatah-1124">Profil GitHub</a>  saya.
+				</p>
 			</div>
 		</section>
 	</body>
