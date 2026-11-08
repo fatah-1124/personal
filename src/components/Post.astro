@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+<section id="artikel" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">Artikel Terbaru</h2>
+    <div class="row g-4">
+      {posts.map((post) => (
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <small class="text-muted">
+                {post.data.date.toLocaleDateString('id-ID', { dateStyle: 'long' })}
+              </small>
+              <h3 class="h5 mt-1">
+                <a href={`/blog/${post.id}/`} class="stretched-link text-decoration-none">
+                  {post.data.title}
+                </a>
+              </h3>
+              <p class="mb-0">{post.data.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <br>
+    <div>
+      <a href="/artikel" class="btn btn-warning">Lihat semua artikel</a>
+    </div>
+  </div>
+</section>

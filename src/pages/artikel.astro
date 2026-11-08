@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import '../assets/css/app.css';
+import '../assets/css/global.css';
+
+const posts = (await getCollection('blog')).sort(
+    (a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0),
+);
+---
+<Layout title="Semua Artikel">
+    <main class="container py-5">
+        <div class="p-4 mb-2 bg-body rounded">
+            <h1 class="mb-4">Semua Artikel</h1>
+            {posts.length > 0 ? (
+                <ul class="list-group">
+                    {posts.map((post) => (
+                        <li class="list-group-item">
+                            <a href={`/blog/${post.id}/`} class="text-decoration-none">
+                                {post.data.title ?? post.id}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>Belum ada artikel.</p>
+            )}
+        </div>
+        
+    </main>
+</Layout>

@@ -7,23 +7,23 @@ date: 2026-08-17
 
 # Strategi Mempersiapkan Masa Pensiun bagi Pelaut
 
-Berbeda dengan banyak profesi darat, karier pelaut memiliki batas yang lebih nyata: tuntutan fisik yang tinggi, standar kesehatan (MCU) yang harus terus dipenuhi, dan usia yang pada titik tertentu membatasi kelayakan untuk kembali berlayar. Karena itu, merencanakan masa pensiun bukan sesuatu yang bisa ditunda hingga mendekati akhir karier — justru harus dimulai sejak kontrak-kontrak pertama.
+Berbeda dengan banyak profesi darat, karier pelaut memiliki batas yang lebih nyata: tuntutan fisik yang tinggi, standar kesehatan (MCU) yang harus terus dipenuhi, dan usia yang pada titik tertentu membatasi kelayakan untuk kembali berlayar. Karena itu, merencanakan masa pensiun bukan sesuatu yang bisa ditunda hingga mendekati akhir karier, justru harus dimulai sejak kontrak-kontrak pertama.
 
 ## 1. Mulai Merencanakan Sejak Dini, Bukan Menjelang Pensiun
 
-Banyak pelaut baru menyadari pentingnya dana pensiun ketika usia sudah mendekati batas layar. Padahal, dengan siklus kontrak yang menghasilkan pemasukan cukup besar dalam periode singkat, masa-masa awal karier justru adalah waktu terbaik untuk mulai menyisihkan dana secara konsisten — memanfaatkan efek compounding dari waktu yang masih panjang.
+Banyak pelaut baru menyadari pentingnya dana pensiun ketika usia sudah mendekati batas layar. Padahal, dengan siklus kontrak yang menghasilkan pemasukan cukup besar dalam periode singkat, masa-masa awal karier justru adalah waktu terbaik untuk mulai menyisihkan dana secara konsisten, memanfaatkan efek compounding dari waktu yang masih panjang.
 
 ## 2. Jangan Bergantung Sepenuhnya pada Pensiun dari Perusahaan
 
 Tidak semua perusahaan pelayaran menyediakan skema pensiun formal, dan skema yang ada pun bervariasi antar operator. Karena itu, penting untuk membangun **dana pensiun mandiri**, baik melalui:
 
 - Program pensiun sukarela dari lembaga keuangan
-- Investasi jangka panjang (reksa dana, saham, obligasi) yang disesuaikan profil risiko
+- Investasi jangka panjang (reksa dana, saham, obligasi, emas) yang disesuaikan profil risiko
 - Aset produktif seperti properti sewa atau lahan pertanian/perkebunan yang menghasilkan pendapatan pasif
 
 ## 3. Bangun Aset yang Bekerja Meski Anda Tidak Berlayar
 
-Penghasilan pelaut berhenti ketika kontrak berakhir dan berlayar tidak lagi memungkinkan. Aset yang menghasilkan pendapatan pasif — sewa properti, hasil lahan, atau usaha yang berjalan tanpa kehadiran fisik penuh — membantu menjaga arus kas tetap ada setelah masa aktif berlayar selesai.
+Penghasilan pelaut berhenti ketika kontrak berakhir dan berlayar tidak lagi memungkinkan. Aset yang menghasilkan pendapatan pasif (sewa properti, hasil lahan, atau usaha yang berjalan tanpa kehadiran fisik penuh) membantu menjaga arus kas tetap ada setelah masa aktif berlayar selesai.
 
 ## 4. Siapkan "Karier Kedua" Sebelum Pensiun Tiba
 

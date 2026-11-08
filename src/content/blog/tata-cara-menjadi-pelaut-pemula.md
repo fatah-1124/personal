@@ -46,7 +46,7 @@ Setelah dokumen lengkap, langkah berikutnya adalah mendapatkan kapal pertama. Be
 - Mengikuti magang/prala (praktek laut) jika masih berstatus taruna
 - Membangun jaringan dengan senior pelaut untuk mendapatkan referensi
 
-Berhati-hatilah terhadap agen yang meminta biaya besar di muka tanpa kejelasan kapal dan kontrak — ini adalah salah satu jebakan paling umum bagi pelaut pemula.
+Berhati-hatilah terhadap agen yang meminta biaya besar di muka tanpa kejelasan kapal dan kontrak, ini adalah salah satu jebakan paling umum bagi pelaut pemula.
 
 ## 5. Rawat Karier Anda Sejak Kontrak Pertama
 

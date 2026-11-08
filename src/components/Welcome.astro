@@ -17,6 +17,7 @@ const {
   imageSrc2 = "/pbi_2.jpg",
   imageAlt2 = "PowerBI",
 } = Astro.props;
+import Post from '../components/Post.astro';
 ---
 	<body>
 		<Hero />
@@ -39,10 +40,17 @@ const {
 						<a class="btn btn-warning" href="/powerBI" role="button">Dashboard Analisis Bahan Bakar</a>
 					</div>
 				</div>
+				
 				<br>
 				<p>
 					Untuk referensi teknis, silahkan kunjungi  <a class="btn btn-warning" href="https://github.com/fatah-1124">Profil GitHub</a>  saya.
 				</p>
+			</div>
+		</section>
+			
+		<section id="artikel" class="karya-container rounded">
+			<div class="p-4 mb-2 text-center text-white">
+				<Post />
 			</div>
 		</section>
 	</body>

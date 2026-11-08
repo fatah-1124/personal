@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+import { getFormattedDate } from '../utils/global.js';
+
+const { post } = Astro.props;
+---
+
+<div class='card'>
+	<div class='thumbnail'>
+		<Image inferSize src={post.data.image} alt={post.data.title} />
+	</div>
+	<div class='card-body'>
+		<h5 class='card-title'>
+			<a href={`blog/${post.slug}`}>{post.data.title}</a>
+		</h5>
+	</div>
+	<div class='card-footer'>
+		<div class='meta'>
+			<p>{post.data.author}</p>
+			<span> &bull; </span>
+			<time datetime={post.data.publishedAt}>
+				{getFormattedDate(post.data.publishedAt)}
+			</time>
+		</div>
+	</div>
+</div>
+<style>
+	/* Make image inside  */
+	.thumbnail {
+		height: 200px;
+		background-color: #eeeeee;
+		border-radius: 0.5rem;
+	}
+
+	.thumbnail img {
+		width: 100%;
+		object-fit: cover;
+		height: 100%;
+		border-radius: 0.5rem;
+	}
+
+	.meta {
+		display: flex;
+		font-size: small;
+	}
+
+	.meta p {
+		margin: 0;
+		margin-right: 0.5rem;
+	}
+
+	.meta time {
+		margin-left: 0.5rem;
+	}
+</style>
